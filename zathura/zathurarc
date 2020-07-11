@@ -1,0 +1,23 @@
+# font
+set font "Lucida Mac Bold 11"
+
+# automatically adjust width
+set adjust-open width
+
+# set title to filename
+set window-title-basename true
+
+# start in full-screen
+#set window-height 3000
+#set window-width 3000 
+
+# zoom and scroll step size
+set zoom-step 20
+set scroll-step 80
+
+# copy selection to system clipboard
+set selection-clipboard clipboard
+
+# enable incremental search
+set incremental-search true
+

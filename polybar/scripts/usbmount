@@ -1,0 +1,5 @@
+#!/bin/bash
+
+thunar /media/Devuan/
+#urxvt -name 'ranger' -e sh -c "ranger /media/Devuan" &
+

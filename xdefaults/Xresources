@@ -1,0 +1,157 @@
+!! Colorscheme
+
+! special
+*.foreground: #ffffff
+*.background: #000000
+!*.cursorColor: #7cfc00
+*.cursorColor: #ffffff
+
+! black
+!URxvt.color0  : #000000
+!URxvt.color8  : #555555
+!*.color0: #263640
+*.color0: #000000
+!*.color8: #4a697d
+*.color8: #555555
+
+! red
+!URxvt.color1  : #AA0000
+!URxvt.color9  : #FF0000
+*.color1: #d12f2c
+*.color9: #fa3935
+
+! green
+!URxvt.color2  : #228B22
+!!URxvt.color10 : #ADFF2F
+!URxvt.color10 : #32CD32
+*.color2: #32cd32
+*.color10: #00ff00
+
+! yellow
+!URxvt.color3  : #AA5500
+!URxvt.color11 : #FFFF55
+*.color3: #f5c71a
+*.color11: #ffdf00
+
+! blue
+!URxvt.color4  : #0000FF
+!URxvt.color12 : #00BFFF
+*.color4: #2587cc
+*.color12: #2ca2f5
+
+! magenta
+!URxvt.color5  : #AA00AA
+!URxvt.color13 : #FF55FF
+*.color5: #696ebf
+*.color13: #8086e8
+
+! cyan
+!URxvt.color6  : #40E0D0 
+!URxvt.color14 : #00FFFF
+*.color6: #289c93
+*.color14: #33c5ba
+
+! white
+!*.color7: #bfbaac 
+!URxvt.color7  : #AAAAAA
+!URxvt.color15 : #FFFFFF
+*.color7: #fdf6e3
+*.color15: #ffffff
+
+!-- Xft settings -- !
+xft.dpi: 96
+xft.antialias: true
+xft.rgba: rgb
+xft.hinting: true
+xft.hintstyle: hintfull
+
+!! URxvt Appearance
+URxvt.termName: rxvt-unicode-256color
+!URxvt.termName: screen-256color
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono:style=Book:size=11,xft:Siji:style=Regular:size=11,xft:Noto Emoji:size=12,xft:FontAwesome:size=11
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold:size=11
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font Mono:style=Oblique:size=11
+URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold Oblique:size=11
+xterm*font: xft:DejaVuSansMono Nerd Font Mono:size=12
+URxvt.keysym.C-minus: resize-font:smaller
+URxvt.keysym.C-plus: resize-font:bigger
+URxvt.keysym.C-equal: resize-font:reset
+URxvt.keysym.C-question: resize-font:show
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 80x24
+xterm*geometry: 80x24
+xterm*internalBorder: 1
+URxvt.cursorBlink: true
+xterm*cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: false
+URxvt.mouseWheelScrollPage: true
+URxvt.background: Black
+URxvt.foreground: White
+URxvt.colorBorder: Black
+URxvt.visualBell: false
+URxvt.depth: 32
+!URxvt.intensityStyles: false 
+URxvt.iso14755: false
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-H: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-L: \033[1;5D
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext: tabbed
+urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,tabbed,matcher,resize-font,-tabbed
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+!URxvt.keysym.C-c: perl:clipboard:copy
+!URxvt.keysym.C-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: qutebrowser
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+!! Tabs
+URxvt.tabbed.disable-shift-down: true
+URxvt.tabbed.disable-control-left: true
+URxvt.tabbed.disable-control-right: true
+URxvt.tabbed.new-button: false
+URxvt.tabbed.tab-numbers: false
+URxvt.tabbed.tab-names: true
+URxvt.tabbed.tabbar-fg: 15
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 16
+URxvt.tabbed.tab-bg: 15
+!URxvt.tabbed.active-fg: 15
+!URxvt.tabbed.actives-fg: 15
+!URxvt.tabbed.actived-fg: 15
+URxvt.tabbed.tabcmds.1: N|shell
+URxvt.tabbed.tabcmds.2: S|root|sudo -i
+URxvt.tabbed.tabcmds.3: R|reddit|torsocks rtv
+URxvt.tabbed.tabcmds.4: Y|youtube|proxychains straw-viewer
+URxvt.tabbed.tabcmds.5: D|duckduckgo|torsocks ddgr
+URxvt.tabbed.tabcmds.6: J|vim|vim
+URxvt.tabbed.tabcmds.7: B|brodskiy.com|ssh brodskiy@brodskiy.com
+URxvt.tabbed.tabcmds.8: E|ranger|ranger
+URxvt.tabbed.tabcmds.9: M|music|vis
+URxvt.tabbed.tabcmds.10: T|matrix|cmatrix
+URxvt.tabbed.tabcmds.11: P|pipes|pipes.sh -t 3
+URxvt.tabbed.tabcmds.12: Z|zsh|zsh
+URxvt.tabbed.tabcmds.13: A|calender|calcurse
+URxvt.tabbed.tabbar-timeouts: 12:.:8:::4:+
+URxvt.tabbed.session: R|M|N
+

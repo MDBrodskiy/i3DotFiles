@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "  %{F#ABB5BF}$(python3 ~/.config/polybar/scripts/charge.py)%{A}%{F-}  "
+

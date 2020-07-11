@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#torify curl -4 -sf v2.ru.wttr.in/94596
+#read 
+torify curl -4 -sf ru.wttr.in/94596
+read
+

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+
+STATUS=$(torsocks  curl -4 -sf wttr.in/94597?format=%C)
+if echo "$STATUS" | grep -q "ERROR"
+then
+  echo "%{F#FF0000}No Data!%{A}%{F-}  "
+elif echo "$STATUS" | grep -q "Unknown"
+then
+  echo "%{F#FF0000}No Data!%{A}%{F-}  "
+elif [ "$STATUS" = "Clear" ]; then
+    echo "%{F#ABB5BF}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+    #echo "%{F#ABB5BF}Walnut Creek%{A}%{F-}: %{F#FFFF66}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-} "
+    #echo "%{F#ABB5BF}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%w+%C+%t) 🌑$(torify curl -4 -sf wttr.in/94597?format=%S) 🌕$(torify curl -4 -sf wttr.in/94597?format=%s)%{A}%{F-} "
+elif [ "$STATUS" = "Overcast" ]; then
+    echo "%{F#ABB5BF}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+elif [ "$STATUS" = "Sunny" ]; then
+    echo "%{F#FFFF66}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+elif [ "$STATUS" = "Rainy" ]; then
+    echo "%{F#1906CC}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+elif [ "$STATUS" = "Partly cloudy" ]; then
+    echo "%{F#2D6389}Partly Cloudy$(torsocks curl -4 -sf v2.wttr.in/94597?format=+%t)%{A}%{F-}  "
+elif [ "$STATUS" = "Cloudy" ]; then
+    echo "%{F#2D6389}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+elif [ "$STATUS" = "Windy" ]; then
+    echo "%{F#534C5C}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t)%{A}%{F-}  "
+
+else
+    echo "%{F#FFFFFF}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%C+%t) %{A}%{F-}  "
+    #echo "%{F#FFFFFF}Walnut Creek: %{A}%{F-} $(torsocks curl -4 -sf v2.wttr.in/94597?format=+%C+%t)  "
+    #echo "%{F#FFFFFF}$(torsocks curl -4 -sf v2.wttr.in/94597?format=%w+%C+%t) 🌑$(torify curl -4 -sf wttr.in/94597?format=%S) 🌕$(torify curl -4 -sf wttr.in/94597?format=%s)%{A}%{F-}  "
+
+fi
+

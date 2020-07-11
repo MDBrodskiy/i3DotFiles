@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+# Since I hop between similar ssh hosts,
+# the colorful border tells me where I've landed.
+# It's based on hostname lenght and cycles through 
+# the basic 8 ANSI colors, minus the black.
+#
+# Usage:
+# $ mfetch            ---    full color
+# $ mfetch plain      ---    colorless border
+# $ mfetch mono       ---    black and white
+
+#[ "$TERM" = "linux" ] && exit
+
+NAME=("Uptime" "Root" "Home" "Memory")
+
+LINE[0]=$(uptime -p |
+	sed 's/^up //; s/hour/hr/; s/minute/min/' |
+	awk '{print $0}')
+
+LINE[1]=$(df -h |
+	awk '/\/$/ {print $3 " / " $2}')
+
+LINE[2]=$(df -h |
+	awk '/\/home$/ {print $3 " / " $2}')
+
+LINE[3]=$(free -h |
+	awk '/^Mem/ {print $3 " / " $2 "\n"}' | sed 's/i//g')
+
+HOST="$(hostname)" L=${#HOST}
+
+while [ "$L" -gt 7 ]
+do
+	L=$((L - 7))
+done
+
+L=$((L + 30)) L="\033[0;${L}m"
+
+A=("\033[1;36m" "\033[0;37m") B=("\033[1;40;32m" "\033[0;40;37m") R="\033[0m"
+
+[ -n "$1" ] && [ "$1" = "plain" ] && L="\033[0m"
+[ -n "$1" ] && [ "$1" = "mono" ] && L="\033[0m" A= B=
+
+printf "${L}%s%28s%s${R}\n" " ╔" "[${HOST}]" "╗" | sed 's/ /═/g; s/═/ /'
+
+for ((i = 0; i < ${#LINE[@]}; i++))
+do
+
+	if [ ! "${LINE[$i]}" = "" ]
+	then
+		C=(${A[@]}) A=(${B[@]}) B=(${C[@]})
+
+		printf " ${L}%s${C[0]} %-6s" "║" "${NAME[$i]}"
+
+		printf "${C[1]}%20s ${L}%s${R}\n" "${LINE[$i]}" "║"
+	fi
+done
+
+printf "${L}%s${R}\n\n" " ╚════════════════════════════╝"
+
+tmux ls 2>/dev/null |
+	grep -cv "attached" |
+	awk '{
+	if ($0 == 1) print "There is 1 detached tmux session."
+	else if ($0 > 1) print "There are " $0 " detached tmux sessions."
+	}'
+  

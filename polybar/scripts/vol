@@ -1,0 +1,430 @@
+#!/bin/bash
+
+CEILING="${BLOCK_INSTANCE%/*}"
+CEILING="${CEILING:-153}"
+
+STEP="${BLOCK_INSTANCE#*/}"
+STEP="${STEP:-5}"
+
+case $BLOCK_BUTTON in	# Ponymix auto-prints volume so >/dev/null
+  3) ponymix toggle >/dev/null;;				# Right Click
+  4) ponymix --max-volume $CEILING increase $STEP >/dev/null;;	# Scroll Up
+  5) ponymix --max-volume $CEILING decrease $STEP >/dev/null;;	# Scroll Down
+esac
+
+if ponymix is-muted; then
+	STATE="MUTE"
+else
+	STATE="$(ponymix get-volume)%"
+fi
+
+if [ "$STATE" = "200%" ]; then
+    echo "MAX"
+elif [ "$STATE" = "199%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "198%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "197%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "196%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "195%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "194%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "193%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "192%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "191%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "190%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "189%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "188%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "187%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "186%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "185%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "184%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "183%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "182%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "181%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "180%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "179%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "178%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "177%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "176%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "175%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "174%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "173%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "172%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "171%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "170%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "169%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "168%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "167%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "166%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "165%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "165%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "164%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "163%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "162%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "161%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "160%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "159%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "158%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "157%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "156%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "155%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "154%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "153%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "152%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "151%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "150%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "149%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "148%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "147%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "146%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "145%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "144%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "143%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "142%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "141%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "140%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "139%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "138%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "137%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "136%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "135%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "134%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "133%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "132%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "131%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "130%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "129%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "128%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "127%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "126%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "125%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "124%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "123%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "122%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "121%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "120%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "119%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "118%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "117%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "116%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "115%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "114%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "113%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "112%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "111%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "110%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "109%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "108%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "107%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "106%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "105%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "104%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "103%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "102%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "101%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "100%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "99%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "98%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "97%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "96%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "95%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "94%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "93%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "92%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "91%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "90%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "89%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "88%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "87%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "86%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "85%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "84%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "83%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "82%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "81%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "80%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "79%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "78%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "77%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "76%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "75%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "74%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "73%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "72%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "71%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "70%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "69%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "68%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "67%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "66%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "65%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "64%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "63%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "62%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "61%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "60%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "59%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "58%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "57%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "56%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "55%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "54%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "53%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "52%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "51%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "50%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "49%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "48%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "47%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "46%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "45%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "44%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "43%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "42%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "41%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "40%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "39%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "38%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "37%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "36%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "35%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "34%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "33%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "32%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "31%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "30%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "29%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "28%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "27%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "26%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "25%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "24%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "23%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "22%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "21%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "20%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "19%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "18%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "17%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "16%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "15%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "14%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "13%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "12%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "11%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "10%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "9%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "8%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "7%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "6%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "5%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "4%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "3%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "2%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "1%" ]; then
+    echo "$STATE"
+elif [ "$STATE" = "0%" ]; then
+    echo "MUTE"
+elif [ "$STATE" = "MUTE" ]; then 
+    echo "$STATE"
+else 
+    echo "!$STATE"
+fi
+
