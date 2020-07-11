@@ -8,7 +8,7 @@
   <h3 align="center">i3 Window Manager DotFiles</h3>
 
   <p align="justify">
-The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong> qutebrowser </strong>, <strong>polybar</strong>,<strong>neofetch</strong>, <strong>slim</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
+The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
 <br />
 </p>
 <p align="center">
@@ -262,5 +262,5 @@ Automates the process of mounting usb devices of various file systems, useful in
 <!-- CONTACT -->
 ## Contact
 
-<a href="mailto:Al@Brodskiy.com">Personal E-Mail</a> — [Personal Webpage](http://Brodskiy.com/)  
+<a href="mailto:Michael@Brodskiy.com">Personal E-Mail</a> — [Personal Webpage](http://Michael.Brodskiy.com/)  
 
