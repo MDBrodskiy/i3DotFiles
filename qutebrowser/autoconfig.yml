@@ -17,12 +17,12 @@ settings:
   completion.timestamp_format:
     global: '%d/%m/%Y'
   content.cookies.accept:
-    global: no-3rdparty
+    global: never
   content.cookies.store:
     global: false
   content.headers.user_agent:
-    global: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
-      Chrome/83.0.4103.61 Safari/537.36
+    global: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+      Gecko) Chrome/83.0.4103.61 Safari/537.36
   content.javascript.enabled:
     global: true
   content.private_browsing:
