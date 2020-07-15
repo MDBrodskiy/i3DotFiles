@@ -249,10 +249,10 @@ Automates the process of mounting usb devices of various file systems, useful in
 
 
 
-<!--[> LICENSE <]-->
-<!--## License-->
+[> LICENSE <]
+## License
 
-<!--Distributed under the MIT License. See `LICENSE` for more information.-->
+Distributed under the MIT License. See [`LICENSE`](https://github.com/MDBrodskiy/i3DotFiles/tree/master/LICENSE) for more information.
 
 
 
