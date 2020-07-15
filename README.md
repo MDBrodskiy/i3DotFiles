@@ -2,7 +2,7 @@
 <br />
 <p align="left">
   <a href="https://github.com/MDBrodskiy/i3DotFiles/tree/master/LICENSE">
-    <img src="images/license.svg" alt="license" width="100" height="60">
+    <img src="images/license.svg" alt="license" width="100" height="40">
 </p>
 <br/>
 <br/>
