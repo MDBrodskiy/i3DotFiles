@@ -1,3 +1,5 @@
+[![MIT License][images/license.svg]][https://github.com/MDBrodskiy/i3DotFiles/tree/master/LICENSE]
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
