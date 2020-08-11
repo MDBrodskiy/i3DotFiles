@@ -2,7 +2,7 @@
 <br />
 <p align="left">
   <a href="https://github.com/MDBrodskiy/i3DotFiles/tree/master/LICENSE">
-    <img src="images/license.svg" alt="license" width="100" height="32">
+    <img src="images/license.svg" alt="license" width="100" height="24">
 </p>
 <br/>
 <br/>
@@ -186,6 +186,8 @@ A terminal based music visualizer. Clone, build, and install from:
 ```
 git clone https://github.com/dpayne/cli-visualizer
 ```
+
+
 For a terminal based PulseAudio volume controller; clone, build, and install from:
 
 ```
