@@ -186,7 +186,11 @@ A terminal based music visualizer. Clone, build, and install from:
 ```
 git clone https://github.com/dpayne/cli-visualizer
 ```
+For a terminal based PulseAudio volume controller; clone, build, and install from:
 
+```
+git clone https://github.com/falconindy/ponymix
+```
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/vis): **config** file and **color** schemes
 
