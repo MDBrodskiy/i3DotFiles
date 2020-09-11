@@ -111,6 +111,7 @@ URxvt.keysym.Control-L: \033[1;5D
 !! Copy Paste & Other Extensions
 URxvt.perl-ext: tabbed
 urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,tabbed,matcher,resize-font,-tabbed
+URxvt.keyboard-select.clipboard: true
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
