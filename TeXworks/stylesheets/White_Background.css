@@ -1,0 +1,107 @@
+QWidget { 
+    background-color: #3A3A3A;
+    color: white;
+}
+
+QPushButton { 
+    background-color: #646464;
+    border-style: inset;
+    border-width: 1.5pt;
+    border-color: white;
+    padding: 4px;
+}
+
+QPushButton:pressed { 
+    background-color: #818181;
+}
+
+QTableView {
+   background-color: #424242;
+   alternate-background-color: #424242;
+   selection-background-color: #818181;
+   font-color:#FFFFFF;
+}
+
+/* QComboBox refers to drop-down menus (such as when selecting pdfTeX, pdfLaTeX, XeTeX, etc.) */
+
+QComboBox {
+    border: 1px solid gray;
+    padding: 1px 18px 1px 3px;
+    border-radius: 4px;
+}
+
+/*QComboBox::drop-down { 
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #EEEEEE;
+    border-left-style: solid;
+}*/
+
+QComboBox::down-arrow:on {
+    top: 5px;
+    left: 5px;
+}
+
+/* QMenuBar refers to the menu at the top (File, Edit, etc.)
+   QMenu::item refers to the items under the menu
+*/
+
+QMenu::item:selected { 
+    background-color: #909090;
+}
+
+QMenuBar::item:pressed,  QMenuBar::item:selected {
+    background: #909090;
+}
+
+QScrollBar:vertical { 
+    background: #424242;
+    width: 10px;
+    margin: 10px 0 10px 0;
+}
+
+QScrollBar::handle:vertical { 
+    background: #AAAAAA;
+    min-height: 20px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { 
+    background: none;
+}
+
+QScrollBar:horizontal { 
+    background: #424242;
+    height: 10px;
+    margin: 0 10px 0 10px;
+}
+
+QScrollBar::handle:horizontal { 
+    background: #AAAAAA;
+    min-width: 20px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal { 
+    background: none;
+}
+
+QTabBar::tab { 
+    background: #3A3A3A;
+    border: #909090;
+    padding: 2px 4px 6px 8px;
+}
+
+QTabBar::tab:hover {
+    background: #818181;
+}
+
+QTabBar::tab:selected {
+    background: #909090;
+}
+
+QTextEdit {
+    background-color: white;  
+    color: black;         
+}
+
