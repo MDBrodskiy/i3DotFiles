@@ -149,6 +149,7 @@ function colorgrid( )
 }
 
 bind TAB:menu-complete
+bind '"\C-H":shell-backward-kill-word'
 
 alias "~=cd /home/Devuan/"
 alias "pause=read"
@@ -159,18 +160,15 @@ alias "ipconfig=ddgr -n 1 --np ip"
 alias "ddg=clear && figlet -f shadow -f slant Duck Duck Go && torsocks ddgr"
 alias "duckduckgo=clear && figlet -f shadow -f slant Duck Duck Go && torsocks ddgr"
 alias "reddit=torsocks rtv"
-alias "youtube=clear && figlet -f shadow -f slant YouTube && proxychains straw-viewer"
-alias "youtube-gui=proxychains gtk-straw-viewer &"
+alias "youtube=clear && figlet -f shadow -f slant YouTube && torsocks youtube-viewer"
+alias "youtube-gui=torsocks youtube-viewer &"
 alias "matlab=octave-cli"
-alias "music=~/.config/polybar/scripts/music &"
-alias "server=ssh brodskiy@brodskiy.com"
-alias "icecat=/home/Devuan/Downloads/Set-Up/IceCat/icecat-bin &"
-alias "torbrowser-launcher=/home/Devuan/Downloads/Set-Up/TOR\ Browser/Browser/start-tor-browser &"
+alias "music=cvlc ~/Music/* &"
+alias "server=ssh server"
+alias "icecat=icecat-bin &"
+alias "torbrowser-launcher=start-tor-browser &"
 alias cls='clear'
-alias MB='figlet -f shadow -f slant Michael Brodskiy'
-alias nc='nordvpn connect'
-alias nc2='nordvpn connect double_vpn'
-alias nd='nordvpn disconnect'
+alias MB='figlet -f shadow -f slant MB'
 
 export EDITOR=vim
 export BROWSER=qutebrowser
