@@ -237,7 +237,15 @@ A Vi/Vim like keyboard driven PDF viewer.
 <!-- XDEFAULTS -->
 ## xdefaults
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/Xdefaults): **Xresources** & **URxvt** plugins
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/xdefaults): **Xresources** & **URxvt** plugins
+
+
+
+<!-- TEXWORKS -->
+## TeXworkks
+
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/TeXworks): TeXworks **CSS** "*stylesheets*"
+
 
 
 <!-- FONTS -->
