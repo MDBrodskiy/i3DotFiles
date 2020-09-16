@@ -603,7 +603,8 @@ sub tab_key_press {
          return 1;
       }
    }
-   elsif ($event->{state} & urxvt::ControlMask) {
+   #elsif ($event->{state} & urxvt::ControlMask) {
+   elsif ($event->{state} & urxvt::Mod1Mask) {
       if ($keysym == 0xff51 || $keysym == 0xff53) {
          # tab movement
          #my ($idx1) = grep $self->{tabs}[$_] == $tab, 0 .. $#{ $self->{tabs} };
