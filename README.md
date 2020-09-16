@@ -60,6 +60,7 @@ The <strong>i3wm</strong> dotfiles maintained in this repository also include cu
 * [**zsh**](#zsh)
 * [**zathurarc**](#zathurarc)
 * [**xdefaults**](#xdefaults)
+* [**texworks**](#texworks)
 * [**fonts**](#fonts)
 * [**usbmount**](#usbmount)
 
