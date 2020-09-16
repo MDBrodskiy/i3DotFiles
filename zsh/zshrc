@@ -116,9 +116,11 @@ alias nc='nordvpn connect'
 alias nc2='nordvpn connect double_vpn'
 alias nd='nordvpn disconnect'
 
+bindkey '^[[3^' kill-word
+bindkey '^H' backward-kill-word
+
 export EDITOR=vim
 export BROWSER=qutebrowser
-
 
 #fortune | `ls /usr/games/cow* | shuf -n 1` -f `ls /usr/share/cowsay/cows/ | shuf -n 1`
 
