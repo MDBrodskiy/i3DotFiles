@@ -243,7 +243,7 @@ A Vi/Vim like keyboard driven PDF viewer.
 
 
 <!-- TEXWORKS -->
-## TeXworkks
+## TeXworks
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/TeXworks): TeXworks **CSS** "*stylesheets*"
 
