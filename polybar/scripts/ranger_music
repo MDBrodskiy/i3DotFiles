@@ -2,9 +2,9 @@
 
 vlc=$(pidof vlc)
 if [ "$vlc" == "" ]; then
-    cvlc -- "$@" & 1>/dev/null
+    cvlc -- "$@" >/dev/null 2>/dev/null &
 else
     pkill vlc 
-    cvlc -- "$@" & 1>/dev/null
+    cvlc -- "$@" >/dev/null 2>/dev/null & 
 fi
 
