@@ -1,0 +1,10 @@
+#!/bin/bash
+
+vlc=$(pidof vlc)
+if [ "$vlc" == "" ]; then
+    cvlc -- "$@" & 1>/dev/null
+else
+    pkill vlc 
+    cvlc -- "$@" & 1>/dev/null
+fi
+
