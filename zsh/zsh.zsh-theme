@@ -93,7 +93,7 @@ prompt_git() {
 build_prompt() {
   prompt_git
   prompt_end
-  battery_pct_prompt
+  #battery_pct_prompt
 }
 
 #setopt prompt_subst
@@ -114,7 +114,8 @@ build_prompt() {
   #fi
 #}
 #RPROMPT=$'$(vcs_info_wrapper)'
-RPROMPT='$(build_prompt)'
+#RPROMPT='$(build_prompt)'
+RPROMPT='$(build_prompt)%{%B%F{green}%}$(battery_pct_prompt)%{%f%k%b%}'
 PROMPT=$'%{\e[0;37m%}%B┌╼\e[42m    \e[42m\e[01;4;37m\$(date +%H:%M)\e[0m\e[42m    \e[0m%b%{\e[0m%}
 %{\e[0;37m%}%B└╼%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;32m%}@%{\e[0m%}%{\e[0;32m%}%B%m%{\e[0;37m%}%b:%b%{\e[0m%}%B%{\e[1;35m%}%b%{\e[0;34m%}%B%b%{\e[1;34m%}%c%{\e[0;37m%}%B%b%{\e[0m%}%{\e[0;34m%}%B%{\e[0m%}%b❱ '
 
