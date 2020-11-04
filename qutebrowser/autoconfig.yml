@@ -10,6 +10,7 @@ settings:
     global:
       normal:
         C: hint links yank
+        ch: history-clear
   completion.cmd_history_max_items:
     global: 0
   completion.shrink:
@@ -25,12 +26,16 @@ settings:
       Gecko) Chrome/83.0.4103.61 Safari/537.36
   content.javascript.enabled:
     global: true
+  content.pdfjs:
+    global: true
   content.private_browsing:
     global: true
   content.proxy:
     global: socks://localhost:9050/
   content.webrtc_ip_handling_policy:
     global: disable-non-proxied-udp
+  downloads.position:
+    global: bottom
   editor.command:
     global:
     - vim
