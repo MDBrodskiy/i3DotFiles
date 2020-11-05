@@ -11,6 +11,10 @@ settings:
       normal:
         C: hint links yank
         ch: history-clear
+  colors.webpage.darkmode.enabled:
+    global: true
+  completion.height:
+    global: 100%
   completion.cmd_history_max_items:
     global: 0
   completion.shrink:
@@ -21,6 +25,8 @@ settings:
     global: never
   content.cookies.store:
     global: false
+  content.headers.referer:
+    global: never
   content.headers.user_agent:
     global: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
       Gecko) Chrome/83.0.4103.61 Safari/537.36
