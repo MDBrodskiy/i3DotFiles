@@ -12,6 +12,8 @@ settings:
         C: hint links yank
         ch: history-clear
   colors.webpage.darkmode.enabled:
+    global: false
+  colors.webpage.prefers_color_scheme_dark:
     global: true
   completion.height:
     global: 100%
