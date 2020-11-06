@@ -42,6 +42,8 @@ settings:
     global: socks://localhost:9050/
   content.webrtc_ip_handling_policy:
     global: disable-non-proxied-udp
+  content.xss_auditing:
+    global: true
   downloads.position:
     global: bottom
   editor.command:
