@@ -204,7 +204,7 @@ git clone https://github.com/falconindy/ponymix
 
 A terminal based Vi/Vim like keyboard based file manager.
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/ranger): **rc.conf**, **DevIcons** plugin & necessary peripherals
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/ranger): **rc.conf**, Archives **Extract/Compress** plugin, **DevIcons** plugin & necessary peripherals
 
 
 <!-- BASH -->
