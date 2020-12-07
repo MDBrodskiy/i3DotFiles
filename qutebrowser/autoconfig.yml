@@ -15,10 +15,10 @@ settings:
     global: false
   colors.webpage.prefers_color_scheme_dark:
     global: true
-  completion.height:
-    global: 100%
   completion.cmd_history_max_items:
     global: 0
+  completion.height:
+    global: 100%
   completion.shrink:
     global: true
   completion.timestamp_format:
@@ -33,7 +33,7 @@ settings:
     global: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
       Gecko) Chrome/83.0.4103.61 Safari/537.36
   content.javascript.enabled:
-    global: true
+    global: false
   content.pdfjs:
     global: true
   content.private_browsing:
@@ -59,6 +59,8 @@ settings:
     global: bold Lucida Mac Bold
   fonts.contextmenu:
     global: bold Lucida Mac Bold
+  fonts.downloads:
+    global: bold Lucida Mac Bold
   fonts.hints:
     global: bold Lucida Mac Bold
   fonts.keyhint:
@@ -77,6 +79,10 @@ settings:
     global: bold Lucida Mac Bold
   fonts.tabs.unselected:
     global: bold Lucida Mac Bold
+  spellcheck.languages:
+    global:
+    - en-US
+    - ru-RU
   url.default_page:
     global: https://3g2upl4pq6kufc4m.onion/
   url.searchengines:
