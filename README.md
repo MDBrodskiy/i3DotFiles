@@ -111,7 +111,7 @@ cd i3-radius && sh build.sh
 
 A Vi/Vim like keyboard based configurable and lightweight web browser.
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/qutebrowser): **autoconfig.yml** file
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/qutebrowser): **autoconfig.yml** file and script installing **dictioniares**
 
 
 
