@@ -27,6 +27,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --font Lucid
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
+bindsym XF86RFKill exec wicd-client &
 #exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
@@ -41,6 +42,7 @@ bindsym XF86MonBrightnessDown exec ~/.config/polybar/scripts/brightness.sh - eDP
 bindsym XF86MonBrightnessUp exec ~/.config/polybar/scripts/brightness +
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 10%
 bindsym XF86KbdBrightnessUp exec xbacklight -inc 10%
+bindsym XF86ScreenSaver exec xrandr --output eDP-1 --brightness 0
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -61,9 +63,9 @@ set $right l
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec rxvt
+bindsym Mod4+Return exec urxvt
 #bindsym Mod4+Return exec i3-sensible-terminal
-bindsym Ctrl+Mod1+t exec rxvt
+bindsym Ctrl+Mod1+t exec urxvt
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -110,8 +112,10 @@ bindsym Mod4+semicolon split h
 bindsym Mod4+v split v
 
 # enter fullscreen mode for the focused container
-bindsym Mod4+f fullscreen toggle
-bindsym Ctrl+Return fullscreen toggle
+#bindsym Mod+f fullscreen toggle
+bindsym Mod4+f exec xdotool mousemove 0 768; fullscreen toggle 
+#bindsym Ctrl+Return fullscreen toggle
+bindsym Ctrl+Return exec xdotool mousemove 0 768; fullscreen toggle 
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym Mod4+s layout stacking
@@ -178,17 +182,33 @@ set $ws10 "10"
 for_window [class="feh"] floating enable; border none
 for_window [class="vlc"] floating enable; border none
 for_window [class="mpv"] floating enable; border none
+for_window [class="ipe"] floating enable
 for_window [class="Sxiv" instance="sxiv"] floating enable; border none
 #for_window [class="qutebrowser"] floating enable
 #for_window [class="Session" instance="session"] floating enable
 #for_window [class="TeXworks" instance="texworks"] floating enable
 for_window [class="libreoffice"] floating enable
+for_window [class="minecraft-launcher"] fullscreen enable
+for_window [class="Scrabbleai.pl" instance="scrabbleai.pl"] floating enable
+for_window [class="GNU Octave" instance="octave-gui"] floating enable
+for_window [class="Gimp-2.10" instance="gimp-2.10"] floating enable
+for_window [class="System-config-printer.py" instance="system-config-printer"] floating enable
+#for_window [class="discord"] fullscreen enable
+for_window [class="labplot2"] floating enable
+for_window [class="geogebra-GeoGebra"] floating enable
+for_window [class="ParaView"] floating enable
+for_window [class="Fityk"] floating enable
+for_window [class="firebird-emu"] floating enable
+for_window [class="Freemat"] floating enable
+#for_window [class="XMgrace"] floating enable
+for_window [class="gr-talent-cruiser-gl-Main"] floating enable
 for_window [class="mkvtoolnix-gui"] floating enable
 for_window [class="IceCat"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="XTerm"] floating enable
+for_window [class="Session" instance="session"] floating enable
 for_window [class="Gnome-ring" instance="gnome-ring"] floating enable
-for_window [class="Org.gnome.Maps" instance="org.gnome.Maps"] floating enable
+for_window [class="Org.gnome.Maps" instance="org.gnome.Maps"] fullscreen
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 #for_window [class="URxvt" instance="urxvt"] floating enable 
 for_window [class="URxvt" instance="info"] fullscreen
@@ -200,9 +220,11 @@ for_window [class="URxvt" instance="shutdown"] floating enable
 for_window [class="Wicd-client.py" instance="wicd-client.py"] floating enable
 for_window [class="Durak.pyw" instance="Durak.pyw"] floating enable
 #for_window [class="Zathura" instance="zathura"] floating enable
-for_window [class="Transmission-gtk" instance="transmission-gtk"] floating enable
+for_window [instance="transmission"] floating enable
 for_window [class="Gtk-straw-viewer" instance="gtk-straw-viewer"] floating enable
+for_window [class="Vinagre" instance="vinagre"] floating enable
 for_window [class="thunderbird"] floating enable
+for_window [class="Wireshark" instance="wireshark"] floating enable
 for_window [class="Rhythmbox" instance="rhythmbox"] floating enable
 for_window [class="Gvim" instance="gvim"] floating enable
 for_window [class="Gtk-gnash" instance="gtk-gnash"] floating enable
@@ -324,13 +346,12 @@ new_window normal 2
 new_float normal 2
 
 #for_window [class="^.*"] floating enable 
-for_window [class="^.*"] border pixel 2.125
+for_window [class="^.*"] border pixel 3.75
 #for_window [class="^.*"] border pixel 0
-for_window [class="qutebrowser"] border pixel 3
+#for_window [class="qutebrowser"] border pixel 2.125
 for_window [class="feh"] border pixel 0
 for_window [class="mpv"] border pixel 0
-for_window [class="Gnome-terminal"] border pixel 2
-#for_window [class="URxvt"] border pixel 1.5
+for_window [class="URxvt"] border pixel 2.125
 
 gaps inner 8
 gaps outer 40
@@ -357,10 +378,10 @@ hide_edge_borders smart_no_gaps
 
 #bindsym Mod1+Tab focus right 
 #bindsym Mod1+Shift+Tab focus left
-exec --no-startup-id alttab -font "xft:Lucida Mac Bold" -t 280x200 -d 0 -s 2 &
-#exec --no-startup-id alttab -font "xft:Lucida Mac Bold" -theme oxygen -t 280x200 -d 0 -s 2 &
-exec --no-startup-id alttab -font "xft:Lucida Mac Bold" -t 280x200 -d 1 -s 2 -mk Super_L  &
-#exec --no-startup-id alttab -font "xft:Lucida Mac Bold" -theme oxygen -t 280x200 -d 1 -s 2 -mk Control_L  &
+exec --no-startup-id alttab -font "xft:Lucida Grande Bold" -t 280x200 -d 0 -s 2 &
+#exec --no-startup-id alttab -font "xft:Lucida Grande Bold" -theme oxygen -t 280x200 -d 0 -s 2 &
+exec --no-startup-id alttab -font "xft:Lucida Grande Bold" -t 280x200 -d 1 -s 2 -mk Super_L  &
+#exec --no-startup-id alttab -font "xft:Lucida Grande Bold" -theme oxygen -t 280x200 -d 1 -s 2 -mk Control_L  &
 bindsym Ctrl+Mod1+Right workspace next
 bindsym Ctrl+Mod1+Left workspace prev
 
@@ -380,17 +401,19 @@ client.focused_active   #FFFFFF #FFFFFF #FFFFFF #FFFFFF
 #bindsym Mod4+x exec i3lock
 #bindsym Mod4+x exec i3lock-fancy
 bindsym Mod4+x exec ~/.config/polybar/scripts/sysmenu
-bindsym Mod4+Shift+x exec urxvt -internalBorder 0 -geometry 145x38 -name 'forecast' -e sh -c "gotop --color=vice"
+#bindsym Mod4+Shift+x exec urxvt -internalBorder 0 -geometry 145x38 -name 'forecast' -e sh -c "gotop --color=vice"
+bindsym Mod4+Shift+x exec xterm -T "GoTop" -n "GoTop" -geometry 125x36+1000+1000 -e bash -c "gotop --color=vice"
 #bindsym Mod4+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym Ctrl+Mod1+l exec i3lock-fancy --font Lucida Mac Bold -- --nofork
 #bindsym Ctrl+Mod1+l exec betterlockscreen -t "Введите Пароль ..." -l
-exec --no-startup-id xautolock -time 1 -notify 1 -locker "i3lock-fancy --font Lucida Mac Bold -- --nofork" 
+
+exec --no-startup-id xautolock -time 1 -corners ---- -notify 1 -locker "i3lock-fancy --font Lucida Mac Bold -- --nofork" &
 #exec --no-startup-id xautolock -time 1 -locker "betterlockscreen -t 'введите пароль ...' -l" 
 
 bindsym Mod4+q exec qutebrowser
 bindsym Print exec gnome-screenshot 
-bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x40 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
-
+#bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x40 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
+bindsym Mod4+Shift+w exec xterm -T "Weather" -n "Weather" -geometry 125x38+1000+1000 -e bash -c ~/.config/polybar/scripts/forecast
 
 exec --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
 exec_always --no-startup-id pulseaudio
