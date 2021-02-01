@@ -198,6 +198,8 @@ For numerous rofi themes clone from:
 git clone https://github.com/davatorium/rofi-themes
 ```
 
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/rofi): customized **rofi** themes
+
 
 
 <!-- CLI MUSIC VISUALIZER -->
