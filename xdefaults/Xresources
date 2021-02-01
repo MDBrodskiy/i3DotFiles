@@ -147,12 +147,14 @@ URxvt.tabbed.tabcmds.4: Y|youtube|proxychains straw-viewer
 URxvt.tabbed.tabcmds.5: D|duckduckgo|torsocks ddgr
 URxvt.tabbed.tabcmds.6: J|vim|vim
 URxvt.tabbed.tabcmds.7: B|brodskiy.com|ssh brodskiy@brodskiy.com
-URxvt.tabbed.tabcmds.8: E|ranger|ranger
-URxvt.tabbed.tabcmds.9: M|music|vis
-URxvt.tabbed.tabcmds.10: T|matrix|cmatrix
-URxvt.tabbed.tabcmds.11: P|pipes|pipes.sh -t 3
-URxvt.tabbed.tabcmds.12: Z|zsh|zsh
-URxvt.tabbed.tabcmds.13: A|calender|calcurse
+URxvt.tabbed.tabcmds.8: E|mail|mutt
+URxvt.tabbed.tabcmds.9: K|ranger|ranger
+URxvt.tabbed.tabcmds.10: M|music|vis
+URxvt.tabbed.tabcmds.11: T|matrix|cmatrix
+URxvt.tabbed.tabcmds.12: P|pipes|pipes.sh -t 3
+URxvt.tabbed.tabcmds.13: Z|zsh|zsh
+URxvt.tabbed.tabcmds.14: A|calender|calcurse
+URxvt.tabbed.tabcmds.15: G|system|gotop --color=vice
 URxvt.tabbed.tabbar-timeouts: 12:.:8:::4:+
 URxvt.tabbed.session: R|M|N
 
