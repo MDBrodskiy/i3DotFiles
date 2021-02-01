@@ -51,11 +51,22 @@ settings:
     global: bottom
   editor.command:
     global:
+    - xterm
+    - -geometry
+    - 80x24+10000+10000
+    - -e
     - vim
-    - -f
+    - +call cursor({line}, {column})
+    - --
     - '{file}'
-    - -c
-    - normal {line}G{column0}l
+  fileselect.handler:
+    global: external
+  fileselect.multiple_files.command:
+    global:
+    - xterm
+    - -e
+    - ranger
+    - --choosefiles={}
   fonts.completion.category:
     global: bold Lucida Mac Bold
   fonts.completion.entry:
@@ -86,6 +97,12 @@ settings:
     global:
     - en-US
     - ru-RU
+  tabs.favicons.scale:
+    global: 1.5
+  tabs.favicons.show:
+    global: never
+  tabs.show:
+    global: multiple
   url.default_page:
     global: https://3g2upl4pq6kufc4m.onion/
   url.searchengines:
