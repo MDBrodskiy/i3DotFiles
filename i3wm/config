@@ -231,6 +231,7 @@ for_window [class="Gtk-straw-viewer" instance="gtk-straw-viewer"] floating enabl
 for_window [class="Vinagre" instance="vinagre"] floating enable
 for_window [class="thunderbird"] floating enable
 for_window [class="Evolution" instance="evolution"] floating enable
+for_window [class="electron-mail" instance="electron-mail"] floating enable
 for_window [class="Wireshark" instance="wireshark"] floating enable
 for_window [class="Rhythmbox" instance="rhythmbox"] floating enable
 for_window [class="Gvim" instance="gvim"] floating enable
