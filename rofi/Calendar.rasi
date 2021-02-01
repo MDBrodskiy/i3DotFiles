@@ -1,0 +1,172 @@
+/************************************************
+ * ROFI Color theme
+***********************************************/
+
+* {
+    nord0: 	        #1F1F1F;
+    nord1: 	        #3b4252;	
+    nord2:          #434c5e;
+    nord3: 	        #4c566a;	
+    nord4: 	        #d8dee9;	
+    nord5: 	        #e5e9f0;	
+    nord6: 	        #eceff4;	
+    nord7: 	        #8fbcbb;	
+    nord8: 	        #88c0d0;	
+    nord9: 	        #81a1c1;	
+    nord11:         #bf616a;
+    nord12:         #d08770;
+    nord13: 	    #ebcb8b;	
+    nord14: 	    #a3be8c;	
+    nord15: 	    #1E88E5;	
+    blue:           #56769E;
+    blue2:          #1E88E5;
+    foreground:                  @nord5;
+    background:                  @nord0;
+    foreground-normal:           @foreground;
+    background-normal:           #282828;
+    foreground-urgent:           @nord13;
+    background-urgent:           @background-normal;
+    foreground-active:           @blue2;
+    background-active:           #252525;
+    foreground-select:           @000000;
+    background-select:           @nord15;
+    border:                      @blue2;
+    lightbg:                     #434c5e;
+}
+#window {
+    fullscreen:             false;
+    hide-scrollbar:         true;
+    lines:                  8;
+    line-padding:           10;
+    padding:                6px;
+    width:                  300px;
+    x-offset:               -0.05%;
+    y-offset:               55.55%;
+    location:               2;
+    columns:                7;
+    border-color:           @blue2;
+
+    background-color:       @background;
+    text-color:             #FFFFFF;
+    border:                 1;
+    border-radius:          12px 12px 0px 0px;
+}
+#mainbox {
+    border:  0;
+    border-radius:          12px 12px 12px 12px;
+    padding: 0;
+    background-color:   @background;
+}
+#message {
+    border:       2px 0px 0px ;
+    border-radius:          12px 12px 12px 12px;
+    border-color: @background;
+    padding:      1px ;
+    background-color:   @background;
+}
+#textbox {
+    text-color: @foreground;
+    background-color:   @background;
+}
+#listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    border-radius:          1px 1px;
+    border-color:   #444444;
+    background-color:   @background;
+    spacing:      3px;
+    scrollbar:    false;
+    padding:      2px ;
+    columns:      7;
+    lines:        8;
+}
+#element {
+    border:  0;
+    border-radius:          12px 12px 12px 12px;
+    padding: 5px;
+    margin: 0px;
+    background-color:   @background;
+}
+#element.normal.normal {
+    background-color: @background-normal;
+    text-color:       @foreground-normal;
+}
+#element.normal.urgent {
+    background-color: @background-urgent;
+    text-color:       @foreground-urgent;
+}
+#element.normal.active {
+    background-color: @background-active;
+    text-color:       @foreground-active;
+}
+#element.selected.normal {
+    background-color: @background-select;
+    text-color:       @foreground-select;
+}
+#element.selected.urgent {
+    background-color: @background-select;
+    text-color:       @foreground-select;
+}
+#element.selected.active {
+    background-color: @background-select;
+    text-color:       @foreground-select;
+}
+#element.alternate.normal {
+    background-color: @background-normal;
+    text-color:       @foreground-normal;
+}
+#element.alternate.urgent {
+    background-color: @background-urgent;
+    text-color:       @foreground-urgent;
+}
+#element.alternate.active {
+    background-color: @background-active;
+    text-color:       @foreground-active;
+}
+#mode-switcher {
+    border:       0px 0px 0px ;
+    border-color: @background;
+    foreground-color:   @background;
+    background-color:   @background;
+}
+#button {
+    spacing:    0;
+    text-color: @foreground;
+    background-color:   @background;
+}
+#button.selected {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+    background-color:   @background;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+    background-color:   @background;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+    background-color:   @background;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+    background-color:   @background;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+    background-color:   @background;
+}
+

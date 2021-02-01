@@ -14,7 +14,7 @@
   <h3 align="center">i3 Window Manager DotFiles</h3>
 
   <p align="justify">
-The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
+The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong>dunst</strong>, <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>mutt</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
 <br />
 </p>
 <p align="center">
@@ -47,10 +47,12 @@ The <strong>i3wm</strong> dotfiles maintained in this repository also include cu
 * [**i3**](#i3)
   * [**i3-gaps**](#i3-gaps)
   * [**i3-radius**](#i3-radius)
+* [**dunst**](#dunst)
 * [**qutebrowser**](#qutebrowser)
 * [**polybar**](#polybar)
 * [**neofetch**](#neofetch)
 * [**slim**](#slim)
+* [**mutt**](#mutt)
 * [**rtv**](#rtv)
 * [**compton**](#comtpon)
 * [**rofi**](#rofi)
@@ -105,6 +107,17 @@ cd i3-radius && sh build.sh
 ```
 
 
+<!-- DUNST -->
+## dunst
+
+A customizable lightweight notification daemon. Clone, build, and install from:
+```
+git clone https://github.com/dunst-project/dunst
+```
+
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/dunst): **dunstrc** and peripheral icons
+
+
 
 <!-- QUTEBROWSER -->
 ## qutebrowser
@@ -112,7 +125,6 @@ cd i3-radius && sh build.sh
 A Vi/Vim like keyboard based configurable and lightweight web browser.
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/qutebrowser): **autoconfig.yml** file and script installing **dictioniares**
-
 
 
 
@@ -146,6 +158,15 @@ git clone https://github.com/dylanaraps/neofetch
 Simple login manager that is both lightweight and easily configurable.
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/slim): **slim.conf** & **themes** for slim
+
+
+
+<!-- MUTT -->
+## mutt
+
+Simple text-based mail client.
+
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, **vim-keybinds.rc** & **powerline** color and configuraions
 
 
 
