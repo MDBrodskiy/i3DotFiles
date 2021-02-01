@@ -1,0 +1,76 @@
+#----------------------------------#
+#      Mutt/NeoMutt Settings:      #
+#----------------------------------#
+
+# Name
+set from = "Michael@Brodskiy.com"
+set realname = "Michael Brodskiy"
+
+# Credentials
+set smtp_url = "smtps://Michael@Brodskiy.com@mailserver.Brodskiy.com:465/"
+set smtp_pass = ""
+set pop_user = "Michael@Brodskiy.com"
+set pop_pass = ""
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# Mailboxes
+set folder = "pops://mailserver.Brodskiy.com:995/INBOX"
+set spoolfile = "+INBOX"
+set mailcap_path = ~/.mailcap
+set forward_format="Fwd: %s"
+set use_domain = no
+set user_agent = no
+set sort_aux = 'reverse-last-date-received'
+
+######### BEGIN IMAP FOLDERS
+mailboxes =Inbox \
+=Sent \
+=Drafts \
+=Junk \
+=Trash 
+######### END IMAP FOLDERS
+
+######## KEY BINDINGS 
+source ~/.config/mutt/vim-keybindings.rc
+
+# Status Bar
+set status_chars=" *%A"
+set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Sidebar
+set  mail_check_stats = yes
+set sidebar_visible = yes
+set sidebar_width = 12
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+set sidebar_short_path 
+bind index,pager B sidebar-toggle-visible
+
+# Where to put the stuff
+set header_cache = "~/.config/mutt/cache/headers"
+set message_cachedir = "~/.config/mutt/cache/bodies"
+set certificate_file = "~/.config/mutt/certificates"
+
+# Etc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+
+# GnuPG bootstrap
+source ~/.config/mutt/gpg.rc
+
+# COLOLSCHEME
+# for solarized:
+# you must load solarized 16 colors theme BEFORE this
+# your terminal 16 colors must be set to solarized theme
+source powerline/powerline.neomuttrc
+
+# for gruvbox:
+# you must load gruvbox theme BEFORE this
+# your terminal 16 colors must be set to gruvbox theme
+source powerline/colors/gruvbox-powerline.neomuttrc
+source powerline/powerline.neomuttrc
+
