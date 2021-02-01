@@ -13,69 +13,69 @@ HIGHLIGHT_FOREGROUND="#1F1F1F"
 BLACK="#000000"
 WHITE="#ffffff"
 RED="#e53935"
-    GREEN="#43a047"
-    YELLOW="#fdd835"
-    BLUE="#1e88e5"
-    MAGENTA="#00897b"
-    CYAN="#00acc1"
-    PINK="#d81b60"
-    PURPLE="#8e24aa"
-    INDIGO="#3949ab"
-    TEAL="#00897b"
-    LIME="#c0ca33"
-    AMBER="#ffb300"
-    ORANGE="#fb8c00"
-    BROWN="#6d4c41"
-    GREY="#757575"
-    BLUE_GREY="#546e7a"
-    DEEP_PURPLE="#5e35b1"
-    DEEP_ORANGE="#f4511e"
-    LIGHT_BLUE="#039be5"
-    LIGHT_GREEN="#7cb342"
+GREEN="#43a047"
+YELLOW="#fdd835"
+BLUE="#1e88e5"
+MAGENTA="#00897b"
+CYAN="#00acc1"
+PINK="#d81b60"
+PURPLE="#8e24aa"
+INDIGO="#3949ab"
+TEAL="#00897b"
+LIME="#c0ca33"
+AMBER="#ffb300"
+ORANGE="#fb8c00"
+BROWN="#6d4c41"
+GREY="#757575"
+BLUE_GREY="#546e7a"
+DEEP_PURPLE="#5e35b1"
+DEEP_ORANGE="#f4511e"
+LIGHT_BLUE="#039be5"
+LIGHT_GREEN="#7cb342"
 
-    # Launch Rofi
-    MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p ' SysMenu: ' \
-    -hide-scrollbar true \
-    -bw 0 \
-    -lines 12 \
-    -line-padding 10 \
-    -padding 20 \
-    -width 13 \
-    -xoffset -0 -yoffset -26 \
-    -location 5 \
-    -columns 1 \
-    -show-icons -icon-theme "oxygen" \
-    -font "DejaVuSansMono Nerd Font Bold 12" \
-    -theme "/usr/share/rofi/themes/Paper.rasi" \
-    -color-enabled true \
-    -color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
-    -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-    -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-    -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-    <<< "  Info|  Calendar|  Calculator|  Editor|  Terminal|  macOS|  Refresh|  Search|  Lock|  Logout|  Reboot|⏻  Shutdown")"
-    case "$MENU" in
-      *Info) xterm -T "GoTop" -n "GoTop" -geometry 125x35+10000+10000 -e bash -c 'gotop --color=vice';;
-      *Calendar) ~/.config/polybar/scripts/naivecalendar.sh;;
-      *Calculator) xterm -T "Octave" -n "Octave" -geometry 80x24+10000+10000 -e bash -c 'octave';;
-      *Editor) xterm -T "Vim" -n "Vim" -geometry 80x24+10000+10000 -e bash -c 'vim';;
-      *Terminal) urxvt;;
-      #*Terminal) xterm -T "Terminal" -n "Terminal" -geometry 80x24+10000+10000;;
-      *macOS) ~/.config/polybar/scripts/macOSmenu;;
-      *Refresh) i3-msg restart;;
-      *Search) rofi -no-lazy-grab -show drun -drun-display-format "{name}" -theme /usr/share/rofi/themes/macOS.rasi;;
-      *Lock) i3lock-fancy;;
-      *Logout) i3-msg exit;;
-      #*Reboot) sudo shutdown -r now;;
-      #*Shutdown) sudo shutdown -h now
-      *Reboot) xterm -T "Reboot?" -n "Reboot?" -geometry 50x1+10000+10000 -e bash -c "sudo shutdown -r now";;
-      *Shutdown) xterm -T "Shutdown?" -n "Shutdown?" -geometry 50x1+10000+10000 -e bash -c "sudo shutdown -h now"
-    esac
+# Launch Rofi
+MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p ' SysMenu: ' \
+-hide-scrollbar true \
+-bw 0 \
+-lines 12 \
+-line-padding 10 \
+-padding 20 \
+-width 13 \
+-xoffset -0 -yoffset -26 \
+-location 5 \
+-columns 1 \
+-show-icons -icon-theme "oxygen" \
+-font "DejaVuSansMono Nerd Font Bold 12" \
+-theme "/usr/share/rofi/themes/Paper.rasi" \
+-color-enabled true \
+-color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
+-color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+<<< "  Info|  Calendar|  Calculator|  Editor|  Terminal|  macOS|  Refresh|  Search|  Lock|  Logout|  Reboot|⏻  Shutdown")"
+case "$MENU" in
+    *Info) xterm -T "GoTop" -n "GoTop" -geometry 125x35+10000+10000 -e bash -c 'gotop --color=vice';;
+    *Calendar) ~/.config/polybar/scripts/naivecalendar.sh;;
+    *Calculator) xterm -T "Octave" -n "Octave" -geometry 80x24+10000+10000 -e bash -c 'octave';;
+    *Editor) xterm -T "Vim" -n "Vim" -geometry 80x24+10000+10000 -e bash -c 'vim';;
+    *Terminal) urxvt;;
+    #*Terminal) xterm -T "Terminal" -n "Terminal" -geometry 80x24+10000+10000;;
+    *macOS) ~/.config/polybar/scripts/macOSmenu;;
+    *Refresh) i3-msg restart;;
+    *Search) rofi -no-lazy-grab -show drun -drun-display-format "{name}" -theme /usr/share/rofi/themes/macOS.rasi;;
+    *Lock) i3lock-fancy;;
+    *Logout) i3-msg exit;;
+    #*Reboot) sudo shutdown -r now;;
+    #*Shutdown) sudo shutdown -h now
+    *Reboot) xterm -T "Reboot?" -n "Reboot?" -geometry 50x1+10000+10000 -e bash -c "sudo shutdown -r now";;
+    *Shutdown) xterm -T "Shutdown?" -n "Shutdown?" -geometry 50x1+10000+10000 -e bash -c "sudo shutdown -h now"
+esac
 
-    # More Options
-    # -fullscreen \
+# More Options
+# -fullscreen \
 
-    # Theming help
-    # color window = background, border, separator
-    # color normal = background, foreground, background-alt, highlight-background, highlight-foreground
+# Theming help
+# color window = background, border, separator
+# color normal = background, foreground, background-alt, highlight-background, highlight-foreground
 # color active = background, foreground, background-alt, highlight-background, highlight-foreground
 # color urgent = background, foreground, background-alt, highlight-background, highlight-foreground
