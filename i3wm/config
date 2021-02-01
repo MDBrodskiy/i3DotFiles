@@ -15,7 +15,6 @@ font Lucida Mac Bold 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
 font Lucida Mac Bold 12
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -25,8 +24,6 @@ font Lucida Mac Bold 12
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --font Lucida Mac Bold -- --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 bindsym XF86RFKill exec wicd-client &
 #exec --no-startup-id nm-applet
 
@@ -73,9 +70,11 @@ bindsym Ctrl+q kill
 
 # start dmenu (a program launcher)
 #bindsym Mod4+d exec dmenu_run
-#bindsym Mod4+d exec rofi -modi drun -show drun -lines 10 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "$base01" -bg "$base02" -fg "$base07" -hlbg "$base05" -columns 1 -font "DejaVu Sans 18" -hlfg "#9575cd"
-bindsym Mod4+d exec rofi -no-lazy-grab -show drun -display-drun "Applications" -drun-display-format "{name}" -theme /usr/share/rofi/themes/paper-float.rasi -show-icons -icon-theme "Papirus" columns 1 -font "Lucida Mac Bold 12" -hlfg "#9575cd"
-bindsym Mod4+Shift+d exec rofi -no-lazy-grab -show window -display-window "Currently Open Windows (all workspaces)" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 20 -padding 20 -width 60 -columns 1 -theme /usr/share/rofi/themes/sidebar.rasi -show-icons -icon-theme "Papirus" -font "Lucida Mac Bold 12" -color-enabled true
+bindsym Mod4+d exec rofi -no-lazy-grab -show drun -drun-display-format "{name}" -theme /usr/share/rofi/themes/macOS.rasi 
+#bindsym Mod4+Shift+d exec rofi -no-lazy-grab -show window -display-window " Windows (all workspaces)" -drun-display-format "{name}" -theme /usr/share/rofi/themes/paper-float.rasi -show-icons -icon-theme "Papirus" columns 1 -font "DejaVuSansMono Nerd Font Bold 12" -hlfg "#9575cd"
+bindsym Mod4+Shift+d exec rofi -no-lazy-grab -show window -display-window "Windows (all workspaces)" -drun-display-format "{name}" -theme /usr/share/rofi/themes/paper-float.rasi -show-icons -icon-theme "Papirus" columns 1 -font "Lucida Mac Bold 12" -hlfg "#9575cd"
+#bindsym Mod4+Shift+d exec rofi -no-lazy-grab -show window -display-window "Currently Open Windows (all workspaces)" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 20 -padding 20 -width 60 -columns 1 -theme /usr/share/rofi/themes/sidebar.rasi -show-icons -icon-theme "Papirus" -font "Lucida Mac Bold 12" -color-enabled true
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -92,6 +91,9 @@ bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
+
+# enable/disable mouse follow focus
+focus_follows_mouse off
 
 # move focused window
 bindsym Mod4+Shift+$left move left
@@ -113,9 +115,9 @@ bindsym Mod4+v split v
 
 # enter fullscreen mode for the focused container
 #bindsym Mod+f fullscreen toggle
-bindsym Mod4+f exec xdotool mousemove 0 768; fullscreen toggle 
+bindsym Mod4+f exec xdotool mousemove 0 1080; fullscreen toggle 
 #bindsym Ctrl+Return fullscreen toggle
-bindsym Ctrl+Return exec xdotool mousemove 0 768; fullscreen toggle 
+bindsym Ctrl+Return exec xdotool mousemove 0 10808; fullscreen toggle 
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym Mod4+s layout stacking
@@ -132,8 +134,11 @@ bindsym Mod4+space focus mode_toggle
 # focus the parent container
 #bindsym Mod4+a focus parent
 bindsym Mod4+a exec ~/.config/polybar/scripts/menu
+bindsym Mod4+Shift+a exec ~/.config/polybar/scripts/macOSmenu
 
-bindsym Mod4+m exec thunderbird &
+bindsym Mod4+BackSpace exec ~/.config/polybar/scripts/naivecalendar.sh
+
+bindsym Mod4+m exec evolution &
 
 # focus the child container
 #bindsym Mod4+d focus child
@@ -189,6 +194,7 @@ for_window [class="Sxiv" instance="sxiv"] floating enable; border none
 #for_window [class="TeXworks" instance="texworks"] floating enable
 for_window [class="libreoffice"] floating enable
 for_window [class="minecraft-launcher"] fullscreen enable
+for_window [class="Jitsi Meet" instance="jitsi meet"] floating enable
 for_window [class="Scrabbleai.pl" instance="scrabbleai.pl"] floating enable
 for_window [class="GNU Octave" instance="octave-gui"] floating enable
 for_window [class="Gimp-2.10" instance="gimp-2.10"] floating enable
@@ -224,6 +230,7 @@ for_window [instance="transmission"] floating enable
 for_window [class="Gtk-straw-viewer" instance="gtk-straw-viewer"] floating enable
 for_window [class="Vinagre" instance="vinagre"] floating enable
 for_window [class="thunderbird"] floating enable
+for_window [class="Evolution" instance="evolution"] floating enable
 for_window [class="Wireshark" instance="wireshark"] floating enable
 for_window [class="Rhythmbox" instance="rhythmbox"] floating enable
 for_window [class="Gvim" instance="gvim"] floating enable
@@ -346,12 +353,12 @@ new_window normal 2
 new_float normal 2
 
 #for_window [class="^.*"] floating enable 
-for_window [class="^.*"] border pixel 3.75
+for_window [class="^.*"] border pixel 0
 #for_window [class="^.*"] border pixel 0
 #for_window [class="qutebrowser"] border pixel 2.125
-for_window [class="feh"] border pixel 0
-for_window [class="mpv"] border pixel 0
-for_window [class="URxvt"] border pixel 2.125
+#for_window [class="feh"] border pixel 0
+#for_window [class="mpv"] border pixel 0
+#for_window [class="URxvt"] border pixel 2.125
 
 gaps inner 8
 gaps outer 40
@@ -367,7 +374,7 @@ smart_gaps inverse_outer
 smart_borders on
 smart_borders no_gaps
 
-border_radius 4
+border_radius 10
 #for_window [class="Gnome-terminal"]  border_radius 20
 #for_window [class="URxvt"]  border_radius 20
 
@@ -401,8 +408,8 @@ client.focused_active   #FFFFFF #FFFFFF #FFFFFF #FFFFFF
 #bindsym Mod4+x exec i3lock
 #bindsym Mod4+x exec i3lock-fancy
 bindsym Mod4+x exec ~/.config/polybar/scripts/sysmenu
-#bindsym Mod4+Shift+x exec urxvt -internalBorder 0 -geometry 145x38 -name 'forecast' -e sh -c "gotop --color=vice"
-bindsym Mod4+Shift+x exec xterm -T "GoTop" -n "GoTop" -geometry 125x36+1000+1000 -e bash -c "gotop --color=vice"
+#bindsym Mod4+Shift+x exec urxvt -internalBorder 0 -geometry 145x38 -name 'GoTop' -e sh -c "gotop --color=vice"
+bindsym Mod4+Shift+x exec xterm -T "GoTop" -n "GoTop" -geometry 125x36+10000+10000 -e bash -c "gotop --color=vice"
 #bindsym Mod4+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym Ctrl+Mod1+l exec i3lock-fancy --font Lucida Mac Bold -- --nofork
 #bindsym Ctrl+Mod1+l exec betterlockscreen -t "Введите Пароль ..." -l
@@ -412,8 +419,8 @@ exec --no-startup-id xautolock -time 1 -corners ---- -notify 1 -locker "i3lock-f
 
 bindsym Mod4+q exec qutebrowser
 bindsym Print exec gnome-screenshot 
-#bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x40 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
-bindsym Mod4+Shift+w exec xterm -T "Weather" -n "Weather" -geometry 125x38+1000+1000 -e bash -c ~/.config/polybar/scripts/forecast
+#bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x36 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
+bindsym Mod4+Shift+w exec xterm -T "Weather" -n "Weather" -geometry 125x36+10000+10000 -e bash -c ~/.config/polybar/scripts/forecast
 
 exec --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
 exec_always --no-startup-id pulseaudio
