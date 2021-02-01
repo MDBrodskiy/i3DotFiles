@@ -1,36 +1,97 @@
-# bluer theme for SLIM
-# by aditya shakya <adi1090x@gmail.com>
-# using artwork from some free html+css login templates on the internet
+	-----------------------------------------------------------------
 
-# Messages (ie: shutdown)
+# Theme for SliM Display Manager
+		 
+	-----------------------------------------------------------------
 
-msg_color               #ffffff
-msg_font                Sans:size=18:bold:dpi=75
-msg_x                   50%
-msg_y                   30%
+# Values for Messages - Color/Font/Position/Shadow (ie: shutting down)
 
-# Session Name
+msg_color							#FFFFFF
+msg_font							San Francisco Display:size=20
+msg_x							50%
+msg_y							50%
 
-session_color               #ffffff
-session_font                Sans:size=16:bold:dpi=75
-session_x                   50%
-session_y                   90%
+msg_shadow_xoffset					2
+msg_shadow_yoffset					2
+msg_shadow_color					#7A7979
 
-# valid values: stretch, tile
+	-----------------------------------------------------------------
 
-background_style        stretch
-background_color        #f2f2f2
+#Values for Session List - Color/Font/Position/Shadow
 
-# Input controls
+#session_color						#FFFFFF
+session_color						#000000
+session_msg
+#session_font						San Francisco Display:size=20
+session_font						Lucida Mac Bold:size=24
+session_x							50%
+session_y							5%
 
-input_panel_x           50%
-input_panel_y           50%
-input_name_x            320
-input_name_y            370
-input_pass_x            320
-input_pass_y            460
-input_font              Sans:size=30:bold:dpi=75
-input_color           #000000
+session_shadow_xoffset				1
+session_shadow_yoffset				1
+#session_shadow_color				#7A7979
+session_shadow_color				#FFFFFF
 
-username_msg            
-password_msg            
+	-----------------------------------------------------------------
+
+# Values for Style of Background: 'stretch', 'tile', 'center', 'color'
+
+background_style					stretch
+background_color					#FF0033
+
+	-----------------------------------------------------------------
+
+# Values for Input Panel - Position/Font/Color/Shadow
+
+input_panel_x						50%
+input_panel_y						60%
+
+input_name_x						180
+input_name_y						192
+input_pass_x						180
+input_pass_y						238
+
+#input_font						San Francisco Display:size=15
+input_font						Lucida Mac Bold:size=12
+input_color						#ffffff
+
+input_shadow_xoffset				1
+input_shadow_yoffset				1
+input_shadow_color					#303030
+
+
+	-----------------------------------------------------------------
+
+# Values for Welcome Message - Position/Font/Color/Shadow
+
+welcome_x						50%
+welcome_y						27%
+
+welcome_font						San Francisco Display:size=20:Bold
+welcome_msg						Welcome!
+welcome_color								#ffffff
+
+welcome_shadow_xoffset				2
+welcome_shadow_yoffset				2
+welcome_shadow_color				#202020
+
+	-----------------------------------------------------------------
+
+# Values for Username/Password - Font/Color/Shadow/Position/Labels
+
+username_font						San Francisco Display:size=10:Bold
+username_color						#C5A595
+
+username_shadow_xoffset				2
+username_shadow_yoffset				2
+username_shadow_color				#505050
+
+username_x						90
+username_y						191
+password_x						90
+password_y						235
+
+username_msg					Username:
+password_msg					Password:
+
+	-----------------------------------------------------------------
