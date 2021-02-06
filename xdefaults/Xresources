@@ -67,12 +67,11 @@ xft.hintstyle: hintfull
 
 !! URxvt Appearance
 URxvt.termName: rxvt-unicode-256color
-!URxvt.termName: screen-256color
-URxvt.font: xft:DejaVuSansMono Nerd Font Mono:style=Book:size=11,xft:Siji:style=Regular:size=11,xft:Noto Emoji:size=12,xft:FontAwesome:size=11
-URxvt.boldFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold:size=11
-URxvt.italicFont: xft:DejaVuSansMono Nerd Font Mono:style=Oblique:size=11
-URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold Oblique:size=11
-xterm*font: xft:DejaVuSansMono Nerd Font Mono:size=12
+URxvt.font: xft:Hack Nerd Font Mono:style=Book:size=11,xft:Siji:style=Regular:size=11,xft:Noto Emoji:size=12,xft:FontAwesome:size=11
+URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=11
+URxvt.italicFont: xft:Hack Nerd Font Mono:style=Oblique:size=11
+URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Oblique:size=11
+xterm*font: xft:Hack Nerd Font Mono:size=12
 URxvt.keysym.C-minus: resize-font:smaller
 URxvt.keysym.C-plus: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
