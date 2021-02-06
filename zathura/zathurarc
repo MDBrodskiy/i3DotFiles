@@ -21,3 +21,50 @@ set selection-clipboard clipboard
 # enable incremental search
 set incremental-search true
 
+# read-only document viewer
+#sandbox strict
+
+# color scheme settings
+set notification-error-bg   "#FF0000"
+set notification-error-fg   "#FFFFFF"
+set notification-warning-bg "#FDD835"
+set notification-warning-fg "#000000"
+set notification-bg         "#00FF00"
+set notification-bg         "#000000"
+
+set completion-bg           "#000000"
+set completion-fg           "#FFFFFF"
+set completion-group-bg     "#FFFFFF"
+set completion-group-fg     "#000000"
+set completion-highlight-bg "#000000"
+set completion-highlight-fg "#1E88E5"
+
+# define the color in index mode
+
+set index-bg                "#FFFFFF"
+set index-fg                "#000000"
+set index-active-bg         "#1E88E5"
+set index-active-fg         "#FFFFFF"
+
+set inputbar-bg             "#000000"
+set inputbar-fg             "#FFFFFF"
+
+set statusbar-bg            "#FFFFFF"
+set statusbar-fg            "#000000"
+
+set highlight-color         "#1E88E5"
+set highlight-active-color  "#00FF00"
+
+set default-bg              "#FFFFFF"
+set default-fg              "#000000"
+set render-loading          "true"
+set render-loading-bg       "#FFFFFF"
+set render-loading-fg       "#1E88E5"
+
+# recolor book content color
+set recolor-lightcolor      "#FFFFFF"
+set recolor-darkcolor       "#000000"
+
+# keep original color
+set recolor-keephue         "true"
+
