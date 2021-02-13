@@ -74,3 +74,14 @@ video/*; mpv -vo drm -quiet '%s'; needsterminal
 # Ascii videos
 # video/x-youtube; youtube-dl -q -o - '%s' | mplayer -cache 8192 -vo caca -quiet -; needsterminal
 # video/*; wget '%s' -O - | mplayer -cache 8192 -vo caca -quiet -; needsterminal
+
+# HTML for Mutt
+text/plain; vim %s
+#text/html; qutebrowser %s
+text/html; lynx %s
+#text/html; lynx -socks-proxy 127.0.0.1:9050 %s; nametemplate=%s.html
+text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+
+# PDFs
+application/pdf; zathura %s pdf
+
