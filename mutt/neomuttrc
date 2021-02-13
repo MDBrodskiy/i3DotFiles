@@ -27,11 +27,11 @@ set user_agent = no
 set sort_aux = 'reverse-last-date-received'
 
 ######### BEGIN IMAP FOLDERS
-mailboxes =Inbox \
-=Sent \
-=Drafts \
-=Junk \
-=Trash 
+mailboxes = +Inbox \
+= Sent \
+= Drafts \
+= Junk \
+= Trash 
 ######### END IMAP FOLDERS
 
 ######## KEY BINDINGS 
