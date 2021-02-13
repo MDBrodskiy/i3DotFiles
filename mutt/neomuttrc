@@ -7,15 +7,18 @@ set from = "Michael@Brodskiy.com"
 set realname = "Michael Brodskiy"
 
 # Credentials
-set smtp_url = "smtps://Michael@Brodskiy.com@mailserver.Brodskiy.com:465/"
+set smtp_url = "smtps://mailserver/"
 set smtp_pass = ""
 set pop_user = "Michael@Brodskiy.com"
 set pop_pass = ""
+set imap_pass = ""
+#set imap_list_subscribed = yes
+#set imap_check_subscribed = yes
 set ssl_starttls = yes
 set ssl_force_tls = yes
 
 # Mailboxes
-set folder = "pops://mailserver.Brodskiy.com:995/INBOX"
+set folder = "pops://mailserver/INBOX"
 set spoolfile = "+INBOX"
 set mailcap_path = ~/.mailcap
 set forward_format="Fwd: %s"
@@ -39,15 +42,21 @@ set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
 # Sidebar
-set  mail_check_stats = yes
+set mail_check_stats = yes
 set sidebar_visible = yes
 set sidebar_width = 12
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 set sidebar_short_path 
 bind index,pager B sidebar-toggle-visible
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
 
 # Where to put the stuff
+set trash = "Trash"
+set record = "Sent"
+set postponed = "Drafts"
 set header_cache = "~/.config/mutt/cache/headers"
 set message_cachedir = "~/.config/mutt/cache/bodies"
 set certificate_file = "~/.config/mutt/certificates"
