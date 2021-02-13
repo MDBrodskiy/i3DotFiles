@@ -113,6 +113,7 @@ alias "torbrowser-launcher=start-tor-browser &"
 alias cls='clear'
 alias MB='figlet -f shadow -f slant MB'
 
+bindkey -v
 bindkey '^[[3^' kill-word
 bindkey '^H' backward-kill-word
 

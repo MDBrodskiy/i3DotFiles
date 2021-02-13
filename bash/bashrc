@@ -148,6 +148,9 @@ function colorgrid( )
     done
 }
 
+set -o vi
+bind -m vi-insert 'Control-l: clear-screen'
+bind -m vi-command 'Control-l: clear-screen'
 bind TAB:menu-complete
 bind '"\C-H":shell-backward-kill-word'
 
