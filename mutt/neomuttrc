@@ -7,19 +7,20 @@ set from = "Michael@Brodskiy.com"
 set realname = "Michael Brodskiy"
 
 # Credentials
-set smtp_url = "smtps://mailserver/"
+set smtp_url = "smtp"
 set smtp_pass = ""
-set pop_user = "Michael@Brodskiy.com"
+set pop_user = ""
 set pop_pass = ""
+set imap_user = ""
 set imap_pass = ""
-#set imap_list_subscribed = yes
-#set imap_check_subscribed = yes
+set imap_list_subscribed = yes
+set imap_check_subscribed = yes
 set ssl_starttls = yes
 set ssl_force_tls = yes
 
 # Mailboxes
-set folder = "pops://mailserver/INBOX"
-set spoolfile = "+INBOX"
+set folder = "Inbox"
+set spoolfile = "+Inbox"
 set mailcap_path = ~/.mailcap
 set forward_format="Fwd: %s"
 set use_domain = no
@@ -29,8 +30,11 @@ set sort_aux = 'reverse-last-date-received'
 ######### BEGIN IMAP FOLDERS
 mailboxes = +Inbox \
 = Sent \
+= Outbox \
 = Drafts \
 = Junk \
+= Spam \
+= Archived \
 = Trash 
 ######### END IMAP FOLDERS
 
@@ -44,14 +48,19 @@ set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%
 # Sidebar
 set mail_check_stats = yes
 set sidebar_visible = yes
-set sidebar_width = 12
+set sidebar_width = 20
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 set sidebar_short_path 
-bind index,pager B sidebar-toggle-visible
-bind index,pager \Cp sidebar-prev
-bind index,pager \Cn sidebar-next
+#bind index,pager B sidebar-toggle-visible
+bind index,pager \Cn sidebar-toggle-visible
+bind index,pager K sidebar-prev
+#bind index,pager \Cp sidebar-prev
+bind index,pager J sidebar-next
+#bind index,pager \Cn sidebar-next
 bind index,pager \Co sidebar-open
+
+index,pager \Co sidebar-open
 
 # Where to put the stuff
 set trash = "Trash"
