@@ -166,7 +166,7 @@ Simple login manager that is both lightweight and easily configurable.
 
 Simple text-based mail client.
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, **vim-keybinds.rc** & **powerline** color and configuraions
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, **gpgrc**, **vim-keybinds.rc** & **powerline** color and configuraions
 
 
 
