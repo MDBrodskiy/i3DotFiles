@@ -82,9 +82,9 @@ text/html; lynx %s
 #text/html; lynx -socks-proxy 127.0.0.1:9050 %s; nametemplate=%s.html
 text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
 
-
 # WYSIWYG document types
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --writer %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice --impress %s
 application/vnd.oasis.opendocument.text; libreoffice --writer %s
 #application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
 #application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
