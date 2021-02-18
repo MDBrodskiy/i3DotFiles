@@ -1,13 +1,18 @@
-#----------------------------------#
-#      Mutt/NeoMutt Settings:      #
-#----------------------------------#
+#+----------------------------------+#
+#|      Mutt/NeoMutt Settings:      |#
+#+----------------------------------+#
 
-# Name
+######### NAME
 set from = "Michael@Brodskiy.com"
 set realname = "Michael Brodskiy"
 
-# Credentials
-set smtp_url = "smtp"
+######### SWITCHING BETWEEN ALTERNATES
+macro compose <esc>1 '<esc>f^UMichael Brodskiy <Michael@Brodskiy.com><enter>'
+macro compose <esc>2 '<esc>f^UMichael Brodskiy <user1@host1.ext1><enter>'
+macro compose <esc>3 '<esc>f^UMichael Brodskiy <user1@host1.ext1><enter>'
+
+######### CREDENTIALS
+set smtp_url = ""
 set smtp_pass = ""
 set pop_user = ""
 set pop_pass = ""
@@ -17,8 +22,10 @@ set imap_list_subscribed = yes
 set imap_check_subscribed = yes
 set ssl_starttls = yes
 set ssl_force_tls = yes
+set imap_authenticators = "gss:login"
+set smtp_authenticators = "oauthbearer" # see oauth/oauth2.py
 
-# Mailboxes
+######### MAILBOXES
 set folder = "Inbox"
 set spoolfile = "+Inbox"
 set mailcap_path = ~/.mailcap
@@ -26,6 +33,14 @@ set forward_format="Fwd: %s"
 set use_domain = no
 set user_agent = no
 set sort_aux = 'reverse-last-date-received'
+
+######### ACCOUNTS
+source ~/.config/mutt/accounts/account.o365
+source ~/.config/mutt/accounts/account.gmail
+
+########## SWITCHING ACCOUNTS
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.o365<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.gmail<enter><change-folder>!<enter>'
 
 ######### BEGIN IMAP FOLDERS
 mailboxes = +Inbox \
@@ -38,14 +53,14 @@ mailboxes = +Inbox \
 = Trash 
 ######### END IMAP FOLDERS
 
-######## KEY BINDINGS 
+######### KEY BINDINGS 
 source ~/.config/mutt/vim-keybindings.rc
 
-# Status Bar
+######### Status Bar
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-# Sidebar
+######### Sidebar
 set mail_check_stats = yes
 set sidebar_visible = yes
 set sidebar_width = 20
@@ -60,9 +75,7 @@ bind index,pager J sidebar-next
 #bind index,pager \Cn sidebar-next
 bind index,pager \Co sidebar-open
 
-index,pager \Co sidebar-open
-
-# Where to put the stuff
+######### WHERE TO PUT MEAT & POTATOES
 set trash = "Trash"
 set record = "Sent"
 set postponed = "Drafts"
@@ -70,25 +83,19 @@ set header_cache = "~/.config/mutt/cache/headers"
 set message_cachedir = "~/.config/mutt/cache/bodies"
 set certificate_file = "~/.config/mutt/certificates"
 
-# Etc
+######### ETC.
 set mail_check = 30
 set move = no
 set imap_keepalive = 900
 set sort = threads
 set editor = "vim"
+auto_view text/html
+set signature = "~/.config/mutt/signatures/primary.sig"
 
-# GnuPG bootstrap
+######### GNUPG BOOTSTRAP
 source ~/.config/mutt/gpg.rc
 
-# COLOLSCHEME
-# for solarized:
-# you must load solarized 16 colors theme BEFORE this
-# your terminal 16 colors must be set to solarized theme
-source powerline/powerline.neomuttrc
-
-# for gruvbox:
-# you must load gruvbox theme BEFORE this
-# your terminal 16 colors must be set to gruvbox theme
-source powerline/colors/gruvbox-powerline.neomuttrc
-source powerline/powerline.neomuttrc
+######### COLOLSCHEME
+source ~/.config/mutt/powerline/powerline.neomuttrc
+source ~/.config/mutt/powerline/colors/vombatidae.neomuttrc
 
