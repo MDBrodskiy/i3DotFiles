@@ -95,7 +95,7 @@ set signature = "~/.config/mutt/signatures/primary.sig"
 ######### GNUPG BOOTSTRAP
 source ~/.config/mutt/gpg.rc
 
-######### COLOLSCHEME
+######### COLORSCHEME
 source ~/.config/mutt/powerline/powerline.neomuttrc
 source ~/.config/mutt/powerline/colors/vombatidae.neomuttrc
 
