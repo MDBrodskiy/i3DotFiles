@@ -164,9 +164,12 @@ Simple login manager that is both lightweight and easily configurable.
 <!-- MUTT -->
 ## mutt
 
-Simple text-based mail client.
+Simple text-based mail client. In order to teach an old dog new tricks clone, build, and install from:
+```
+git clone https://github.com/neomutt/neomutt
+```
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, **gpg**.**rc**, **vim-keybinds.rc** & **powerline** color and configuraions
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, multiple *empty* account configurations, **gpg**.**rc**, **primary** signature,  **oauth2** script,  **vim-keybinds.rc** & **powerline** colors and configurations
 
 
 
