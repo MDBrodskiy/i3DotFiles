@@ -169,7 +169,7 @@ Simple text-based mail client. In order to teach an old dog new tricks clone, bu
 git clone https://github.com/neomutt/neomutt
 ```
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, multiple *empty* account configurations, **gpg**.**rc**, **primary** signature,  **oauth2** script,  **vim-keybindings.rc** & **powerline** colors and configurations
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mutt): **neomuttrc**, multiple *empty* account configurations, **gpg**.**rc**, **primary** signature,  **oauth2** script,  alternative content type **templates**, **vim-keybindings.rc** & **powerline** colors and configurations
 
 
 
