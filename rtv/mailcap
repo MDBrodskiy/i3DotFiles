@@ -78,9 +78,11 @@ video/*; mpv -vo drm -quiet '%s'; needsterminal
 # HTML for Mutt
 text/plain; vim %s
 #text/html; qutebrowser %s
-text/html; lynx %s
+text/html; w3m %s
+#text/html; lynx %s
 #text/html; lynx -socks-proxy 127.0.0.1:9050 %s; nametemplate=%s.html
-text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+text/html; w3m -dump %s; nametemplate=%s.html; copiousoutput
+#text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
 
 # WYSIWYG document types
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --writer %s
