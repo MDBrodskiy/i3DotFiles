@@ -39,8 +39,8 @@ source ~/.config/mutt/accounts/account.o365
 source ~/.config/mutt/accounts/account.gmail
 
 ########## SWITCHING ACCOUNTS
-macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.o365<enter><change-folder>!<enter>'
-macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.gmail<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.o365<enter><change-folder>!<enter>' "Sync O365"
+macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.gmail<enter><change-folder>!<enter>' "Sync G-Mail"
 
 ######### BEGIN IMAP FOLDERS
 named-mailboxes " Inbox───────" "+Inbox" \
@@ -91,6 +91,22 @@ set postponed = "Drafts"
 set header_cache = "~/.config/mutt/cache/headers"
 set message_cachedir = "~/.config/mutt/cache/bodies"
 set certificate_file = "~/.config/mutt/certificates"
+
+########## CONVERT MARKDOWN TO HTML FOR E-MAIL COMPOSITION 
+macro compose ,m \
+"<enter-command>set pipe_decode<enter>\
+<pipe-message>pandoc -f gfm -t plain -o /tmp/msg.txt<enter>\
+<pipe-message>pandoc -s -f gfm -t html5 -o /tmp/msg.html<enter>\
+<enter-command>unset pipe_decode<enter>a^U/tmp/msg.txt\n^Da^U/tmp/msg.html\n^D^T^Utext/html; charset=utf-8\n=DTT&d^U\n" \
+"Convert Markdown to HTML5 and plaintext alternative content types"
+
+########## CONVERT LATEX TO HTML FOR E-MAIL COMPOSITION 
+macro compose ,l \
+"<enter-command>set pipe_decode<enter>\
+<pipe-message>pandoc -f latex -t plain -o /tmp/msg.txt<enter>\
+<pipe-message>pandoc -s -f latex -t html5 -o /tmp/msg.html<enter>\
+<enter-command>unset pipe_decode<enter>a^U/tmp/msg.txt\n^Da^U/tmp/msg.html\n^D^T^Utext/html; charset=utf-8\n=DTT&d^U\n" \
+"Convert LaTeX to HTML5 and plaintext alternative content types"
 
 ######### ETC.
 set mail_check = 30
