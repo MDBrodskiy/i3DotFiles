@@ -103,6 +103,8 @@ settings:
     global: never
   tabs.show:
     global: multiple
+  tabs.title.format:
+    global: '{audio}{index} — {current_title}'
   url.default_page:
     global: https://3g2upl4pq6kufc4m.onion/
   url.searchengines:
