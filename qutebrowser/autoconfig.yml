@@ -9,6 +9,8 @@ settings:
   bindings.commands:
     global:
       normal:
+        ',m': spawn torsocks umpv {url}
+        ',M': hint links spawn torsocks umpv {hint-url}
         C: hint links yank
         ch: history-clear
   colors.webpage.darkmode.enabled:
