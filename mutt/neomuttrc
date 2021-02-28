@@ -116,6 +116,8 @@ set sort = threads
 set editor = "vim"
 auto_view text/html
 set signature = "~/.config/mutt/signatures/primary.sig"
+set new_mail_command = "notify-send --icon 'icons/Mutt.png' \
+    'New E-Mail(s)' '%n New Messages, %u Unread Messages' &"
 
 ######### GNUPG BOOTSTRAP
 source ~/.config/mutt/gpg.rc
