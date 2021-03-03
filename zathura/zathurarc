@@ -16,13 +16,14 @@ set zoom-step 20
 set scroll-step 80
 
 # copy selection to system clipboard
-set selection-clipboard clipboard
+set selection-clipboard primary
+#set selection-clipboard clipboard
 
 # enable incremental search
 set incremental-search true
 
 # read-only document viewer
-#sandbox strict
+sandbox strict
 
 # color scheme settings
 set notification-error-bg   "#FF0000"
