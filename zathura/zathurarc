@@ -30,7 +30,7 @@ set notification-error-fg   "#FFFFFF"
 set notification-warning-bg "#FDD835"
 set notification-warning-fg "#000000"
 set notification-bg         "#00FF00"
-set notification-bg         "#000000"
+set notification-fg         "#000000"
 
 set completion-bg           "#000000"
 set completion-fg           "#FFFFFF"
