@@ -421,7 +421,8 @@ exec --no-startup-id xautolock -time 1 -corners ---- -notify 1 -locker "i3lock-f
 bindsym Mod1+d exec ~/.config/polybar/scripts/word-lookup.sh
 
 bindsym Mod4+q exec qutebrowser
-bindsym Print exec gnome-screenshot 
+bindsym Print --release exec scrot 'screenshot_%m-%d-%Y_%s.png' -e 'mv $f ~/Pictures/Screenshots/'
+bindsym Shift+Print --release exec scrot -us 'screenshot_%m-%d-%Y_%s.png' -e 'mv $f ~/Pictures/Screenshots/'
 #bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x36 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
 bindsym Mod4+Shift+w exec xterm -T "Weather" -n "Weather" -geometry 125x36+10000+10000 -e bash -c ~/.config/polybar/scripts/forecast
 
