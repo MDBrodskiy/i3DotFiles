@@ -68,6 +68,7 @@ xft.hintstyle: hintfull
 !! URxvt Appearance
 xterm*termName: xterm-256color
 URxvt.termName: rxvt-unicode-256color
+URxvt.iconFile: Rxvt-Unicode.svg
 URxvt.font: xft:Hack Nerd Font Mono:style=Regular:size=11,xft:Siji:style=Regular:size=11,xft:Noto Emoji:size=12,xft:FontAwesome:size=12
 URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=11
 URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=11
