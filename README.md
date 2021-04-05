@@ -148,7 +148,7 @@ A configurable system info script. Clone and install from:
 git clone https://github.com/dylanaraps/neofetch
 ```
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/neofetch): **config.conf** 
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/neofetch): **config.conf** and **ascii** *themes*
 
 
 
