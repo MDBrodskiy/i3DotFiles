@@ -37,7 +37,9 @@ settings:
   content.javascript.enabled:
     global: false
   content.javascript.enabled:
+    '*://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/*': true
     '*://3g2upl4pq6kufc4m.onion/*': true
+    '*://*.duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/*': true
     '*://*.3g2upl4pq6kufc4m.onion/*': true
   content.pdfjs:
     global: true
@@ -108,9 +110,9 @@ settings:
   tabs.title.format:
     global: '{audio}{index} — {current_title}'
   url.default_page:
-    global: https://3g2upl4pq6kufc4m.onion/
+    global: https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/
   url.searchengines:
     global:
-      DEFAULT: https://3g2upl4pq6kufc4m.onion/?q={}
+      DEFAULT: https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/?q={}
   url.start_pages:
-    global: https://3g2upl4pq6kufc4m.onion/
+    global: https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/
