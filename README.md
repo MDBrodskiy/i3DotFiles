@@ -14,7 +14,7 @@
   <h3 align="center">i3 Window Manager DotFiles</h3>
 
   <p align="justify">
-The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong>dunst</strong>, <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>mutt</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
+The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong>dunst</strong>, <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>mutt</strong>,  <strong>mpv</strong>, <strong>rtv</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
 <br />
 </p>
 <p align="center">
@@ -53,6 +53,7 @@ The <strong>i3wm</strong> dotfiles maintained in this repository also include cu
 * [**neofetch**](#neofetch)
 * [**slim**](#slim)
 * [**mutt**](#mutt)
+* [**mpv**](#mpv)
 * [**rtv**](#rtv)
 * [**compton**](#comtpon)
 * [**rofi**](#rofi)
@@ -173,12 +174,22 @@ git clone https://github.com/neomutt/neomutt
 
 
 
+<!-- MPV -->
+## mpv
+
+MPV media player
+
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mpv): **input.conf**, **mpv.conf**, **osc/uosc.conf** & peripheral lua scripts
+
+
+
 <!-- RTV -->
 ## rtv
 
 Reddit terminal viewer
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/rtv): **mailcap** & **config** file
+
 
 
 <!-- COMPTON -->
