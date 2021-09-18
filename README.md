@@ -179,7 +179,7 @@ git clone https://github.com/neomutt/neomutt
 
 MPV media player
 
-[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mpv): **input.conf**, **mpv.conf**, **osc/uosc.conf** & peripheral lua scripts
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/mpv): **input.conf**, **mpv.conf**, **osc/uosc.conf** & peripheral *lua* scripts
 
 
 
