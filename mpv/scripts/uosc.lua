@@ -3456,13 +3456,15 @@ end)
 mp.add_key_binding(nil, 'open-config-directory', function()
 	local config = serialize_path(mp.command_native({'expand-path', '~~/mpv.conf'}))
 	local args
+    local configs_dir = "ranger " .. config.dirname  --create mpv configs path to input into ranger
 
 	if state.os == 'windows' then
 		args = {'explorer', '/select,', config.path}
 	elseif state.os == 'macos' then
 		args = {'open', '-R', config.path}
 	elseif state.os == 'linux' then
-		args = {'xdg-open', config.dirname}
+		--args = {'xdg-open', config.dirname}
+        args = {'xterm', '-T', '"Ranger"', '-n', '"Ranger"', '-geometry', '80x24+1000+1000', '-e', 'bash', '-c', configs_dir}
 	end
 
 	utils.subprocess_detached({args = args, cancellable = false})
