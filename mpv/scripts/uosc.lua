@@ -247,11 +247,12 @@ local options = {
 	menu_item_height = 36,
 	menu_item_height_fullscreen = 50,
 	menu_wasd_navigation = false,
-	menu_hjkl_navigation = false,
+	menu_hjkl_navigation = true,
 	menu_opacity = 0.8,
 	menu_font_scale = 1,
 
-	top_bar = 'no-border',
+	top_bar = 'never',
+	--top_bar = 'no-border',
 	top_bar_size = 40,
 	top_bar_size_fullscreen = 46,
 	top_bar_persistency = '',
@@ -1319,15 +1320,19 @@ function icons.volume_muted(pos_x, pos_y, size) return icons._volume(true, pos_x
 
 function icons.arrow_right(pos_x, pos_y, size)
 	local ass = assdraw.ass_new()
-	local scale = size / 200
+	local scale = size / 250
 	function x(number) return pos_x + (number * scale) end
 	function y(number) return pos_y + (number * scale) end
-	ass:move_to(x(-22), y(-80))
-	ass:line_to(x(-45), y(-57))
-	ass:line_to(x(12), y(0))
-	ass:line_to(x(-45), y(57))
-	ass:line_to(x(-22), y(80))
-	ass:line_to(x(58), y(0))
+	ass:move_to(x(73), y(-80))
+	ass:line_to(x(50), y(-57))
+	ass:line_to(x(105), y(0))
+	ass:line_to(x(50), y(57))
+	ass:line_to(x(73), y(80))
+	ass:line_to(x(153), y(0))
+	ass:move_to(x(100), y(-22))
+	ass:line_to(x(-55), y(-22))
+	ass:line_to(x(-55), y(22))
+	ass:line_to(x(100), y(22))
 	return ass.text
 end
 
@@ -2737,7 +2742,7 @@ state.context_menu_items = (function()
 			local is_dummy = key:sub(1, 1) == '#'
 			local submenu_id = ''
 			local target_menu = main_menu
-			local title_parts = split(title or '', ' *> *')
+			local title_parts = split(title or '', ' *→ *')
 
 			for index, title_part in ipairs(#title_parts > 0 and title_parts or {''}) do
 				if index < #title_parts then
@@ -2754,6 +2759,7 @@ state.context_menu_items = (function()
 					-- If command is already in menu, just append the key to it
 					if target_menu.items_by_command[command] then
 						local hint = target_menu.items_by_command[command].hint
+						--target_menu.items_by_command[command].hint = hint and hint..'/'..key or key
 						target_menu.items_by_command[command].hint = hint and hint..', '..key or key
 					else
 						local item = {
