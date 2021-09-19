@@ -26,9 +26,9 @@ local o = {
     split_paths = true,
     -- Font settings
     font_scale = 120,
-    border_size = 0.7,
+    border_size = .5,
     -- Highlight color in BGR hexadecimal
-    hi_color = "FFE5881E",
+    hi_color = "E5881E",
     -- Draw ellipsis at start/end denoting ommited entries
     ellipsis = false
 }
@@ -220,16 +220,16 @@ function display_list()
     draw_list(list, start, choice)
     list_drawn = true
 
-    mp.add_forced_key_binding("k", "UP", function()
+    mp.add_forced_key_binding("K", "UP", function()
         start, choice = select(list, start, choice, -1)
     end, {repeatable=true})
-    mp.add_forced_key_binding("j", "DOWN", function()
+    mp.add_forced_key_binding("J", "DOWN", function()
         start, choice = select(list, start, choice, 1)
     end, {repeatable=true})
-    mp.add_forced_key_binding("l", "ENTER", function()
+    mp.add_forced_key_binding(":", "ENTER", function()
         load(list, start, choice)
     end)
-    mp.add_forced_key_binding("h", "DEL", function()
+    mp.add_forced_key_binding("H", "DEL", function()
         delete(list, start, choice)
         list = read_log_table()
         if not list or not list[1] then
