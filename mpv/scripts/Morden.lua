@@ -45,7 +45,7 @@ local user_opts = {
 -- Localization
 local language = {
 	['eng'] = {
-	    welcome = '{\\fs24\\1c&H0&\\3c&HFFFFFF&}Drop files or URLs to play here.',  -- this text appears when mpv starts
+	    welcome = '{\\fs24\\1c&H0&\\3c&HFFFFFF&}Drop files or URLs to play here.\nЗдорова!',  -- this text appears when mpv starts
 		off = 'OFF',
 		na = 'n/a',
 		none = 'none',
@@ -58,21 +58,6 @@ local language = {
 		nolist = 'Empty playlist.',
 		chapter = 'Chapter',
 		nochapter = 'No chapters.',
-	},
-	['chs'] = {
-		welcome = '{\\1c&H00\\bord0\\fs30\\fn微软雅黑 light\\fscx125}MPV{\\fscx100} 播放器',  -- this text appears when mpv starts
-		off = '关闭',
-		na = 'n/a',
-		none = '无',
-		video = '视频',
-		audio = '音频',
-		subtitle = '字幕',
-		available = '可选',
-		track = '：',
-		playlist = '播放列表',
-		nolist = '无列表信息',
-		chapter = '章节',
-		nochapter = '无章节信息',
 	}
 }
 -- read options from config and command-line
@@ -272,7 +257,7 @@ function countone(val)
     return val
 end
 
--- multiplies two alpha values, formular can probably be improved
+-- multiplies two alpha values, formula can probably be improved
 function mult_alpha(alphaA, alphaB)
     return 255 - (((1-(alphaA/255)) * (1-(alphaB/255))) * 255)
 end
@@ -1180,9 +1165,9 @@ function osc_init()
 
     ne.content = function ()
         if mp.get_property('pause') == 'yes' then
-            return ('\xEF\x8E\xA7')
-        else
             return ('\xEF\x8E\xAA')
+        else
+            return ('\xEF\x8E\xA7')
         end
     end
     ne.eventresponder['mbtn_left_up'] =
