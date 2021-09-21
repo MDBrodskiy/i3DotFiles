@@ -29,8 +29,8 @@ local o = {
     border_size = .5,
     -- Highlight color in BGR hexadecimal
     hi_color = "E5881E",
-    -- Draw ellipsis at start/end denoting ommited entries
-    ellipsis = false
+    -- Draw ellipsis at start/end denoting omitted entries
+    ellipsis = true
 }
 (require "mp.options").read_options(o)
 local utils = require("mp.utils")
