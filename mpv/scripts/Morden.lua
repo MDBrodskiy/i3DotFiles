@@ -45,7 +45,7 @@ local user_opts = {
 -- Localization
 local language = {
 	['eng'] = {
-	    welcome = '{\\fs24\\1c&H0&\\3c&HFFFFFF&}Drop files or URLs to play here.\nЗдорова!',  -- this text appears when mpv starts
+	    welcome = '{\\fs24\\1c&H0&\\3c&HFFFFFF&}Drop files or URLs to play here.',  -- this text appears when mpv starts
 		off = 'OFF',
 		na = 'n/a',
 		none = 'none',
@@ -2001,6 +2001,9 @@ function always_on(val)
         end
     end
 end
+
+-- function to peek the timeline
+mp.add_key_binding(nil, 'peek-timeline', function() show_osc() end)
 
 -- mode can be auto/always/never/cycle
 -- the modes only affect internal variables and not stored on its own.
