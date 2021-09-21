@@ -26,21 +26,21 @@
 # Note that rtv returns a list of urls for imgur albums, so we don't put quotes
 # around the `%s`
 #image/x-imgur-album; feh -g 640x480  -. %s; test=test -n "$DISPLAY"
-image/x-imgur-album; torify feh -Yx -. %s; test=test -n "$DISPLAY"
-image/gif; mpv '%s' --autofit 640x480 --loop=inf; test=test -n "$DISPLAY"
+image/x-imgur-album; torsocks feh -Yx -. %s; test=test -n "$DISPLAY"
+image/gif; torsocks mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
 #image/*; feh -g 640x480 -. '%s'; test=test -n "$DISPLAY"
-image/*; torify feh -Yx -. '%s'; test=test -n "$DISPLAY"
+image/*; torsocks feh -Yx -. '%s'; test=test -n "$DISPLAY"
 
 # Youtube videos are assmpved a custom mime-type, which can be streamed with
 # vlc or youtube-dl.
 #video/x-youtube; vlc '%s'; test=test -n "$DISPLAY"
-video/x-youtube; mpv '%s'; test=test -n "$DISPLAY"
+video/x-youtube; torsocks mpv '%s'; test=test -n "$DISPLAY"
 #video/x-youtube; vlc '%s' --width 640 --height 480; test=test -n "$DISPLAY"
-video/x-youtube; mpv --ytdl-format=bestvideo+bestaudio/best '%s' --autofit 640x480; test=test -n "$DISPLAY"
+video/x-youtube; torsocks mpv --ytdl-format=bestvideo+bestaudio/best '%s' --autofit=640x480; test=test -n "$DISPLAY"
 
 # Mpv is a simple and effective video streamer
-#video/*; mpv '%s' --autofit 640x480 --loop=inf; test=test -n "$DISPLAY"
-video/*; mpv '%s' --loop=inf; test=test -n "$DISPLAY"
+#video/*; mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
+video/*; torsocks mpv '%s' --loop=inf; test=test -n "$DISPLAY"
 #video/*; mpv '%s' --fs --loop=inf; test=test -n "$DISPLAY"
 
 ###############################################################################
@@ -68,8 +68,8 @@ image/*; curl -s '%s' | convert -resize 80x80 - jpg:/tmp/rtv.jpg && img2xterm /t
 image/*; curl -s '%s' | convert - jpg:/tmp/rtv.jpg && img2txt -f utf8 /tmp/rtv.jpg; needsterminal; copiousoutput
 
 # Full motion videos - requires a framebuffer to view
-video/x-youtube; mpv -vo drm -quiet '%s'; needsterminal
-video/*; mpv -vo drm -quiet '%s'; needsterminal
+video/x-youtube; torsocks mpv -vo drm -quiet '%s'; needsterminal
+video/*; torsocks mpv -vo drm -quiet '%s'; needsterminal
 
 # Ascii videos
 # video/x-youtube; youtube-dl -q -o - '%s' | mplayer -cache 8192 -vo caca -quiet -; needsterminal
