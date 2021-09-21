@@ -20,7 +20,7 @@ Options go in `script-opts/uosc.conf`. Defaults:
 
 ```
 # timeline size when fully retracted, 0 will hide it completely
-timeline_size_min=2
+timeline_size_min=0
 # timeline size when fully expanded, in pixels, 0 to disable
 timeline_size_max=40
 # same as ^ but when in fullscreen
@@ -212,7 +212,7 @@ local infinity = 1e309
 
 -- OPTIONS/CONFIG/STATE
 local options = {
-	timeline_size_min = 2,
+	timeline_size_min = 0,
 	timeline_size_max = 40,
 	timeline_size_min_fullscreen = 0,
 	timeline_size_max_fullscreen = 60,
