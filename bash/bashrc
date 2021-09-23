@@ -177,7 +177,7 @@ alias MB='figlet -f shadow -f slant MB'
 
 export EDITOR=vim
 export BROWSER=qutebrowser
-
+export TERMINAL=urxvtc
 
 #fortune | `ls /usr/games/cow* | shuf -n 1` -f `ls /usr/share/cowsay/cows/ | shuf -n 1`
 

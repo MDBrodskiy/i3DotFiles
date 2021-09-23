@@ -60,9 +60,9 @@ set $right l
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec urxvt
+bindsym Mod4+Return exec urxvtc
 #bindsym Mod4+Return exec i3-sensible-terminal
-bindsym Ctrl+Mod1+t exec urxvt
+bindsym Ctrl+Mod1+t exec urxvtc
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -409,7 +409,7 @@ client.focused_active   #FFFFFF #FFFFFF #FFFFFF #FFFFFF
 #bindsym Mod4+x exec i3lock
 #bindsym Mod4+x exec i3lock-fancy
 bindsym Mod4+x exec ~/.config/polybar/scripts/sysmenu
-#bindsym Mod4+Shift+x exec urxvt -internalBorder 0 -geometry 145x38 -name 'GoTop' -e sh -c "gotop --color=vice"
+#bindsym Mod4+Shift+x exec urxvtc -internalBorder 0 -geometry 145x38 -name 'GoTop' -e sh -c "gotop --color=vice"
 bindsym Mod4+Shift+x exec xterm -T "GoTop" -n "GoTop" -geometry 125x36+10000+10000 -e bash -c "gotop --color=vice"
 #bindsym Mod4+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym Ctrl+Mod1+l exec i3lock-fancy --font Lucida Mac Bold -- --nofork
@@ -423,7 +423,7 @@ bindsym Mod1+d exec ~/.config/polybar/scripts/word-lookup.sh
 bindsym Mod4+q exec qutebrowser
 bindsym Print --release exec scrot 'screenshot_%m-%d-%Y_%s.png' -e 'mv $f ~/Pictures/Screenshots/'
 bindsym Shift+Print --release exec scrot -us 'screenshot_%m-%d-%Y_%s.png' -e 'mv $f ~/Pictures/Screenshots/'
-#bindsym Mod4+Shift+w exec urxvt -internalBorder 0 -geometry 125x36 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
+#bindsym Mod4+Shift+w exec urxvtc -internalBorder 0 -geometry 125x36 -name 'forecast' -e sh -c "~/.config/polybar/scripts/forecast"
 bindsym Mod4+Shift+w exec xterm -T "Weather" -n "Weather" -geometry 125x36+10000+10000 -e bash -c ~/.config/polybar/scripts/forecast
 
 exec --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
@@ -438,7 +438,7 @@ exec_always --no-startup-id start-pulseaudio-x11
 #exec_always compton -f -r --blur-background 
 exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton/compton.conf
 
-#exec urxvtd -q -f -o
+exec urxvtd -q -f -o
 #exec_always compton -cCGfF -b -i 0.85 --vsync i3-sensible-terminal 
 #exec compton -cCGfF -b -i 0.45 --vsync opengl
 
