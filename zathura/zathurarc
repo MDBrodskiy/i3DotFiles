@@ -67,5 +67,10 @@ set recolor-lightcolor      "#FFFFFF"
 set recolor-darkcolor       "#000000"
 
 # keep original color
+set recolor                 "true"
 set recolor-keephue         "true"
+
+# include peripheral colorscheme
+include colorschemes/colors/base16-<color>.config
+
 
