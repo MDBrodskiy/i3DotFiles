@@ -1,0 +1,82 @@
+# [mpd]
+ncmpcpp_directory = "~/.config/ncmpcpp"
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "~/Music/"
+lyrics_directory = "~/.local/share/lyrics"
+
+# [header]
+header_visibility = "no"
+
+# [playlist]
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+song_list_format = "$b{%a — %t $r [%l]}"
+song_status_format = "$b{%a — %t}"
+song_library_format = "$b{%t}"
+song_columns_list_format = "(30)[blue]{t|f: Title} (35)[blue]{a} (30)[blue]{b} (30)[white]{l}"
+now_playing_prefix = "$u$b$8"
+#now_playing_prefix = "$b$8{{}}$8 "
+now_playing_suffix = "$/b$/u"
+selected_item_prefix = "$b$5 "
+selected_item_suffix = "$/b"
+browser_playlist_prefix = "$1▷$1 "
+
+# [statusbar]
+progressbar_look = "∞▌"
+#progressbar_look = "━■"
+#progressbar_look = "━╉─"
+#progressbar_look = "━━━"
+statusbar_visibility = "yes"
+
+# [library]
+media_library_primary_tag = "artist"
+media_library_albums_split_by_date = "no"
+startup_screen = "playlist"
+startup_slave_screen = "browser"
+startup_slave_screen_focus = "yes"
+locked_screen_width_part = "30"
+display_volume_level = "yes"
+ignore_leading_the = "yes"
+
+# [global]
+user_interface = "alternative"
+alternative_header_first_line_format = "$b$8$aqqu$/a$5 $u{{%t}|{%f}}$/u $8$atqq$/a$5$/b"
+alternative_header_second_line_format = "{{$5$b%a$/b$9}{ $b{—} $5%b$9}{ ($4%y$9)}}|{%D}"
+allow_for_physical_item_deletion = "no"
+jump_to_now_playing_song_at_start = "yes"
+clock_display_seconds = "yes"
+display_bitrate = "no"
+mouse_support = "yes"
+external_editor = "vim"
+use_console_editor = "yes"
+centered_cursor = "yes"
+enable_window_title = "yes"
+song_window_title_format = "{%a} — {%t}"
+ask_before_clearing_playlists = "yes"
+execute_on_song_change = "~/.config/ncmpcpp/changecover.sh"
+
+# [colors]
+colors_enabled = "yes"
+main_window_color = "white"
+empty_tag_color = "blue"
+discard_colors_if_item_is_selected = "no"
+state_flags_color = "white"
+visualizer_color = "blue"
+window_border_color = "white"
+header_window_color = "white"
+volume_color = "white"
+state_line_color = "blue"
+progressbar_elapsed_color = "blue"
+progressbar_color = "white"
+statusbar_color = "blue"
+current_item_prefix = "$(blue)$r"
+current_item_inactive_column_prefix = "$(white)$r"
+
+# [visualizer]
+visualizer_look = "▮▋"
+message_delay_time = "2"
+visualizer_type = "spectrum"
+
+# vim: filetype=conf
+
