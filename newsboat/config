@@ -1,0 +1,85 @@
+# ░░░░░░ ░░░░░░  ░░   ░░  ░░░░░░ ░░░░░
+# ███╗   ██╗███████╗██╗    ██╗███████╗
+# ████╗  ██║██╔════╝██║    ██║██╔════╝
+# ██╔██╗ ██║█████╗  ██║ █╗ ██║███████╗
+# ██║╚██╗██║██╔══╝  ██║███╗██║╚════██║
+# ██║ ╚████║███████╗╚███╔███╔╝███████║
+# ╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝ ╚══════╝
+# ░░░░░░ ░░░░░░  ░░   ░░  ░░░░░░ ░░░░░
+
+auto-reload yes
+reload-time 120
+reload-threads 100
+
+download-retries 5
+download-timeout 60
+
+confirm-exit no
+notify-always yes
+notify-program notify-send --icon icons/newsboat.png 'News'
+
+#highlight all "Intelligence" color166 black bold
+#highlight all "Software" color133 black bold
+#highlight all "Politics" color33 black bold
+#highlight all "Entertainment" color34 black bold
+#highlight all "" color190 black bold
+#highlight all "" color124 black bold
+#highlight all color248 black bold
+highlight article "^(Feed|Title|Author|Link|Date|Linux):.*" color75 default
+highlight article "^Podcast Download URL:.*" color71 default
+highlight article "^Links:" white color0 underline
+highlight article "\\[[0-9][0-9]*\\]" color72 default bold
+highlight article "\\[image [0-9][0-9]*\\]" color72 default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" color72 default bold
+highlight article ":.*\\(link\\)$" color74 default
+highlight article ":.*\\(image\\)$" color74 default
+highlight article ":.*\\(embedded flash\\)$" color74 default
+
+user-agent ""
+#user-agent "Lynx/2.8.5rel.1 libwww-FM/2.14"
+use-proxy yes
+proxy-type socks5
+proxy localhost:9050
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+#browser "w3m %u"
+browser "qutebrowser %u"
+
+macro y set browser "mpv %u" ; open-in-browser ; set browser "qutebrowser %u"
+macro , set browser "qutebrowser %u"; open-in-browser
+
+# colors
+include ~/.config/newsboat/colorschemes/nord
+color background          white     default
+color listnormal          yellow     default
+color listnormal_unread   blue       default bold
+color listfocus           white      blue bold
+color listfocus_unread    color235   blue bold
+color info                white      color235 bold standout
+color article             white      default
+
+# highlights
+highlight article "^(Feed|Link):.*$" yellow default bold
+highlight article "^(Title|Date|Author):.*$" yellow default bold
+highlight article "https?://[^ ]+" blue default underline
+highlight article "\\[[0-9]+\\]" yellow default bold
+highlight article "\\[image\\ [0-9]+\\]" yellow default bold
+highlight feedlist "^─.*$" yellow color235 bold
