@@ -1,0 +1,13 @@
+next_img L
+prev_img H
+orient_1 K
+orient_3 J
+jump_last G
+zoom_in plus
+jump_first g
+zoom_out minus
+scroll_up k Up
+scroll_down j Down
+scroll_left h Left
+scroll_right l Right
+toggle_fullscreen f
