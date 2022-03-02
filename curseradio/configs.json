@@ -1,0 +1,33 @@
+{
+  "opml": { "root": "http://opml.radiotime.com/" },
+  "playback": { "command": "/usr/bin/mpv" },
+  "keymap": {
+    "up": "KEY_UP",
+    "up_vi": "k",
+    "down": "KEY_DOWN",
+    "down_vi": "j",
+    "start": "KEY_HOME",
+    "start_vi": "g",
+    "end": "KEY_END",
+    "end_vi": "G",
+    "pageup": "KEY_PPAGE",
+    "pageup_vi": "p",
+    "pagedown": "KEY_NPAGE",
+    "pagedown_vi": "n",
+    "enter": "KEY_ENTER",
+    "enter": "l",
+    "stop": "s",
+    "exit": "q",
+    "favorite": "f"
+  },
+  "colors": {
+    "selected-item": "inverted",
+    "message": "yellow",
+    "statusbar": "green-bg"
+  },
+  "opened_delimiter": "▶",
+  "closed_delimiter": "▼",
+  "statusbar-text": "  {}  ",
+  "outline-color": "green",
+  "title-color": "white"
+}
