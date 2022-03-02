@@ -14,7 +14,7 @@
   <h3 align="center">i3 Window Manager DotFiles</h3>
 
   <p align="justify">
-The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong>dunst</strong>, <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>mutt</strong>,  <strong>ncmpcpp</strong>, <strong>mpv</strong>, <strong>newsboat</strong>, <strong>rtv</strong>, <strong>feh</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
+The <strong>i3wm</strong> dotfiles maintained in this repository also include customizable configurations for <strong>dunst</strong>, <strong> qutebrowser</strong>, <strong>polybar</strong>, <strong>neofetch</strong>, <strong>slim</strong>, <strong>mutt</strong>,  <strong>ncmpcpp</strong>, <strong>mpv</strong>, <strong>newsboat</strong>, <strong>curseradio</strong>, <strong>rtv</strong>, <strong>feh</strong>, <strong>compton</strong>, <strong>rofi</strong>, <strong>music visualizer</strong>, <strong>ranger</strong>, <strong>bash</strong>, and <strong>zsh</strong> as well as run command configurations for <strong>zathura</strong> and xdefaults definitions for <strong>XTerm</strong> and <strong>Rxvt-Unicode</strong> (<em>vim run commands have been omitted from this repo</em>).
 <br />
 </p>
 <p align="center">
@@ -56,6 +56,7 @@ The <strong>i3wm</strong> dotfiles maintained in this repository also include cu
 * [**ncmpcpp**](#ncmpcpp)
 * [**mpv**](#mpv)
 * [**newsboat**](#newsboat)
+* [**curseadio**](#curseradio)
 * [**rtv**](#rtv)
 * [**feh**](#feh)
 * [**compton**](#comtpon)
@@ -203,6 +204,19 @@ Lightweight RSS feed aggregator
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/newsboat): **config** file
 
 
+
+<!-- CURSERADIO -->
+## curseradio
+
+An improved terminal based Vi/Vim keyboard driven web radio player. Clone, build, install from:
+```
+git clone https://github.com/DanielSchuette/curseradio-improved
+```
+
+[<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/newsboat): JSON **config** file
+
+
+
 <!-- RTV -->
 ## rtv
 
@@ -271,7 +285,7 @@ git clone https://github.com/falconindy/ponymix
 <!-- RANGER -->
 ## ranger
 
-A terminal based Vi/Vim like keyboard based file manager.
+A terminal based Vi/Vim like keyboard driven file manager.
 
 [<u>contains</u>](https://github.com/MDBrodskiy/i3DotFiles/tree/master/ranger): **rc.conf**, Archives **extract/compress** plugin, **DevIcons** plugin & necessary peripherals
 
