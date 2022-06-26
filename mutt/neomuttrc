@@ -62,7 +62,7 @@ named-mailboxes " Inbox───────" "+Inbox" \
 ######### END IMAP FOLDERS
 
 ######### KEY BINDINGS 
-source ~/.config/mutt/vim-keybindings.rc
+source ~/.config/mutt/key\ bindings/vim-keybindings.rc
 
 ######### STATUS BAR
 set status_chars=" *%A"
@@ -83,6 +83,9 @@ bind index,pager K sidebar-prev
 bind index,pager J sidebar-next
 #bind index,pager \Cn sidebar-next
 bind index,pager \Co sidebar-open
+
+# Reply to all recipients
+bind index,pager R group-reply
 
 ######### WHERE TO PUT MEAT & POTATOES
 set trash = "Trash"
@@ -120,7 +123,7 @@ set new_mail_command = "notify-send --icon 'icons/Mutt.png' \
     'New E-Mail(s)' '%n New Messages, %u Unread Messages' &"
 
 ######### GNUPG BOOTSTRAP
-source ~/.config/mutt/gpg.rc
+source ~/.config/mutt/gnupg/gpg.rc
 
 ######### COLORSCHEME
 source ~/.config/mutt/powerline/powerline.neomuttrc
