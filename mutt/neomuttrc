@@ -42,6 +42,10 @@ source ~/.config/mutt/accounts/account.gmail
 macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.o365<enter><change-folder>!<enter>' "Sync O365"
 macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account.gmail<enter><change-folder>!<enter>' "Sync G-Mail"
 
+########## ALIASES
+set alias_file = "~/.config/mutt/aliases/aliases"
+source "~/.config/mutt/aliases/aliases"
+
 ######### BEGIN IMAP FOLDERS
 named-mailboxes " Inbox───────" "+Inbox" \
 " Sent"        "+Sent" \
