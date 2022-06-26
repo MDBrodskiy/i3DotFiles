@@ -1,0 +1,14 @@
+alias                                  key_1                 name_1  <e-mail_1>   # Comment
+alias                                  key_2                 name_2  <e-mail_2>   # Comment
+alias                                  key_3                 name_3  <e-mail_3>   # Comment
+alias                                  key_4                 name_4  <e-mail_4>   # Comment
+alias                                  key_5                 name_5  <e-mail_5>   # Comment
+alias                                  key_6                 name_6  <e-mail_6>   # Comment
+alias                                  key_7                 name_7  <e-mail_7>   # Comment
+alias                                  key_8                 name_8  <e-mail_8>   # Comment
+alias                                  key_9                 name_9  <e-mail_9>   # Comment
+alias                                  key_10                name_10  <e-mail_10> # Comment
+alias -group group_1_name group_1_key  key_1, key_2, key_3                        # Comment
+alias -group group_2_name group_2_key  key_4, key_5, key_6                        # Comment
+alias -group group_3_name group_3_key  key_7, key_8, key_9                        # Comment
+alias -group group_4_name group_4_key  key_1, key_10                              # Comment
